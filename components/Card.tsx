@@ -1,12 +1,13 @@
+import { FC } from 'react'
 import Image from './Image'
 import Link from './Link'
+import { Project } from '@/data/projectsData'
 
-const Card = ({ title, description, imgSrc, href }) => (
+export const Card: FC<Project> = ({ title, description, imgSrc, technologies, href }) => (
   <div className="md max-w-[544px] p-4 md:w-1/2">
     <div
-      className={`${
-        imgSrc && 'h-full'
-      }  overflow-hidden rounded-md border-2 border-gray-200 border-opacity-60 dark:border-gray-700`}
+      className={`${imgSrc && 'h-full'
+        }  overflow-hidden rounded-md border-2 border-gray-200 border-opacity-60 dark:border-gray-700`}
     >
       {imgSrc &&
         (href ? (
@@ -39,6 +40,15 @@ const Card = ({ title, description, imgSrc, href }) => (
           )}
         </h2>
         <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
+        <div>
+          {technologies.map(technology => {
+            return (
+              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium leading-4 bg-primary-100 text-primary-800 dark:bg-primary-800 dark:text-primary-100 mr-2 mb-2">
+                {technology}
+              </span>
+            )
+          })}
+        </div>
         {href && (
           <Link
             href={href}

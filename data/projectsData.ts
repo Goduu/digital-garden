@@ -1,18 +1,18 @@
-interface Project {
+export type Project = {
   title: string
   description: string
+  technologies: string[]
   href?: string
   imgSrc?: string
 }
 
 const projectsData: Project[] = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'Trattoria Goduu',
+    description: `A simple restaurant menu.`,
+    imgSrc: '/static/images/trattoria.png',
+    technologies: ['Next.js', 'Tailwind CSS', 'TypeScript'],
+    href: 'https://trattoria-goduu.vercel.app/',
   },
   {
     title: 'The Time Machine',
@@ -20,6 +20,7 @@ const projectsData: Project[] = [
     to the desired date and press "Go". No more worrying about lost keys or
     forgotten headphones with this simple yet affordable solution.`,
     imgSrc: '/static/images/time-machine.jpg',
+    technologies: [],
     href: '/blog/the-time-machine',
   },
 ]
