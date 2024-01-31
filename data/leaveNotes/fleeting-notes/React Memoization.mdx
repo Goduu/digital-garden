@@ -1,0 +1,44 @@
+---
+title: Memoization
+date: 2023-01-01
+tags: ['react', 'memoization']
+---
+
+- React memoization don't work like traditional memoization, it's just use comparing the last with the new values and avoid re-renders if the values are the same. It don't momoize all the already used values.
+- memo() just compares flat values
+- if the prop is an array or object we should use useMemo
+
+### When should we use useMemo ?
+
+❌ Not use with primitive values which are compared by value
+
+```ts
+const value = useMemo(() => number1 + number2, [number1, number2])
+```
+
+✅ Use with an primitive values array calculation
+
+```ts
+const value = useMemo(() => numbers.reduce((acc, number) => acc + number, 0), [numbers])
+```
+
+Try to always use useMemo when returning an array or object:
+
+```ts
+const multpliedValues = userMemo(() => numbers.map((value) => value * 100), [numbers])
+```
+
+```ts
+const person = useMemo(
+  () => ({
+    first,
+    last,
+    full: `${first} ${last}`,
+  }),
+  [first, last]
+)
+```
+
+## useCallback
+
+Maintain the reference for functions, similar to useMemo

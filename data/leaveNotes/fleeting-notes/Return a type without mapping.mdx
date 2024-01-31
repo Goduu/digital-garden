@@ -1,0 +1,39 @@
+---
+title: Return a type without mapping
+date: 2023-04-08
+tags: ['typescript']
+
+---
+
+For example, we have a user:
+
+```ts
+user: {
+	id: string,
+	firstName: string,
+	lastName: string
+}
+```
+
+and a function to format its name:
+
+```ts
+const formatUserName = (user: User) => {
+	...
+}
+```
+
+To sort users and return `User` without remaping the entity and without reusing the formatUser in every sort evaluation we can:
+
+```ts
+export function sortUsers<U extends UserNameProps>(users: U[] | undefined): U[] {
+  return [...(users || [])]
+    .map((user) => ({
+      ...user,
+      formattedName: formatUserName(user),
+    }))
+    .sort((a, b) => a.formattedName.localeCompare(b.formattedName))
+}
+```
+
+It ignores the new added `formattedName` prop by enforcing the function return type.

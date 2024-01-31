@@ -1,0 +1,18 @@
+---
+title: Promise all() vs allSettled()
+date: 2023-01-01
+tags: ['rest', 'promise', 'async']
+---
+
+### all()
+
+This returned promise fulfills when all of the input's promises fulfill. If one fails, we don't get any results.
+
+- Good to use when we need the result of EVERY request to proceed.
+
+### allSettled
+
+This returned promise fulfills when all of the input's promises settle (including when an empty iterable is passed), with an array of objects that describe the outcome of each promise.
+We all get results, but we need to check if it fails or succeeded.
+
+- Good when we can still proceed with partial results.

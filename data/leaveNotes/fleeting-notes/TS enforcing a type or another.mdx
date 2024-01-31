@@ -1,0 +1,27 @@
+---
+title: Ts enforcing a type or another
+date: 2023-01-01
+tags: ['typescript']
+
+---
+
+Making one type | another we enforce that this or that prop should be mandatory in one type but not on the other.
+
+```ts
+export type FormConfirmationProps<V extends FormValues> = {
+  requireConfirmation: true
+  onConfirm: OnConfirmForm<V>
+  onSubmit?: never
+}
+
+export type FormNoConfirmationProps<V extends FormValues> = {
+  requireConfirmation?: never
+  onConfirm?: never
+  onSubmit: OnSubmitForm<V>
+}
+
+export type FormProviderProps<V extends FormValues> = {
+  ...
+} & (FormConfirmationProps<V> | FormNoConfirmationProps<V>)
+
+```

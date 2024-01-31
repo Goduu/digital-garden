@@ -1,0 +1,46 @@
+---
+title: Barrel
+date: 2023-01-01
+tags: ['typescript']
+draft: false
+summary: ""
+---
+
+A barrel is a way to rollup exports from several modules into a single convenient module. The barrel itself is a module file that re-exports selected exports of other modules.
+
+```ts
+// demo/foo.ts
+
+export class Foo {}
+
+// demo/bar.ts
+
+export class Bar {}
+
+// demo/baz.ts
+
+export class Baz {}
+```
+
+Without Barrel:
+
+```ts
+import { Foo } from '../demo/foo'
+
+import { Bar } from '../demo/bar'
+
+import { Baz } from '../demo/baz'
+```
+
+With Barrel:
+
+```ts
+// demo/index.ts
+export * from './foo' // re-export all of its exports
+export * from './bar' // re-export all of its exports
+export * from './baz' // re-export all of its exports
+```
+
+```ts
+import { Foo, Bar, Baz } from '../demo' // demo/index.ts is implied
+```

@@ -1,0 +1,102 @@
+---
+title: Webpack
+date: 2023-01-01
+tags:
+  - webpack
+  - frontend
+---
+
+## Concepts
+
+[Base article](https://www.valentinog.com/blog/webpack/)
+
+### Entry point:
+
+The starting point from which all the dependencies of a frontend project are collected. `src/index.js`
+
+```js
+// webpack.config.js
+module.exports = {
+  entry: { index: path.resolve(__dirname, 'source', 'index.js') },
+}
+```
+
+### Output
+
+Where the resulting JavaScript and static files are collected during the build process. `dist/`
+
+```js
+module.exports = {
+  output: {
+    path: path.resolve(__dirname, 'build'),
+  },
+}
+```
+
+### Loaders
+
+Third-party extensions that help Webpack deal with various file extension.
+The order in which loaders appear in the configuration is of high importance
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      }
+    ]
+  },
+```
+
+### Plugins
+
+Third-party extensions that can alter how webpack works
+
+```js
+module.exports = {
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'index.html'),
+    }),
+  ],
+}
+```
+
+### Mode
+
+`developemnt` / `production` - production applies minification and other optimizations:
+
+- minification with TerserWebpackPlugin to reduce the bundle size
+- scope hoisting with ModuleConcatenationPlugin
+  It also set `process.env.NODE_ENV` to "production". This environment variable is useful for doing things conditionally in production or in development.
+
+### Lazy loading / Code spliting
+
+Optimization technique.
+Developers can decide to load an specific part of the code from an user interaction like onClick or page load.
+
+```js
+module.exports = {
+  optimization: {
+    splitChunks: { chunks: 'all' },
+  },
+}
+```
+
+Dynamic imports loads code dynamically
+
+```js
+const getUserModule = () => import('./common/usersAPI')
+```
+
+```js
+btn.addEventListener('click', () => {
+  getUserModule().then(({ getUsers }) => {
+    getUsers().then((json) => console.log(json))
+  })
+})
+```
+
+#### Configuring [[Babel]]

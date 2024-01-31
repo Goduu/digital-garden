@@ -1,0 +1,42 @@
+---
+title: Key property
+date: 2023-01-01
+tags: ['react']
+---
+
+If we give a component a key prop Reacts sees it as a different profile if this component changes.
+
+To avoid those changes of props:
+
+```ts
+export default function ProfilePage({ userId }) {
+  const [comment, setComment] = useState('')
+
+  // 🔴 Avoid: Resetting state on prop change in an Effect
+
+  useEffect(() => {
+    setComment('')
+  }, [userId])
+}
+```
+
+We could use the key attribute.
+
+```ts
+export default function ProfilePage({ userId }) {
+
+return (
+<Profile
+	userId={userId}
+	key={userId}
+/>
+);
+}
+
+function Profile({ userId }) {
+// ✅ This and any other state below will reset on key change automatically
+const [comment, setComment] = useState('');
+}
+```
+
+Source: https://react.dev/learn/you-might-not-need-an-effect#resetting-all-state-when-a-prop-changes

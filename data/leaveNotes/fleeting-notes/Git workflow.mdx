@@ -1,0 +1,29 @@
+---
+title: Git workflow
+date: 2023-01-01
+tags: ['git']
+---
+
+Adds the changes to the latest commit. (can change the message)
+
+```console
+git commit --amend
+```
+
+For PR review purposes. Adds a commit fixing the HASH commit up.
+
+```console
+git commit --fixup HASH
+```
+
+Rebase with main and autosquash any fixups and merges on branch
+
+```console
+git rebase --autosquash -i main
+```
+
+Without specifying the details, will protect all remote refs that are going to be updated by requiring their current value to be the same as the remote-tracking branch we have for them.
+
+```
+--force-with-lease
+```

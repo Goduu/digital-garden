@@ -1,0 +1,39 @@
+---
+title: React lifecycle hooks
+date: 2023-01-01
+tags: ['react']
+---
+
+### componentWillMount
+
+```javascript
+useLayoutEffect(() => {
+    …
+  },[])
+```
+
+### componentDidMount
+
+```javascript
+ useEffect(() => {
+    …
+  }, [])
+```
+
+### componentWillUpdate
+
+```javascript
+useEffect(() => {
+    …
+  }, [variavel])
+```
+
+### componentWillUnmount
+
+```javascript
+useEffect(() => {
+  return () => {
+    …
+  }
+},[])
+```
