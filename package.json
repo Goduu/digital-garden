@@ -17,7 +17,7 @@
     "autoprefixer": "^10.4.13",
     "contentlayer": "0.3.4",
     "country-flag-icons": "^1.5.9",
-    "esbuild": "0.18.11",
+    "esbuild": "^0.20.0",
     "github-slugger": "^1.4.0",
     "gray-matter": "^4.0.2",
     "image-size": "1.0.0",
