@@ -7,7 +7,6 @@ import Skills from '@/components/resume/Articles/Skills'
 import Professional from '@/components/resume/Articles/Professional'
 import Achievements from '@/components/resume/Articles/Achievements'
 import { AdditionalInfo } from '@/components/resume/Articles/AdditionalInfo'
-import { Languages } from '@/components/resume/Articles/Languages'
 
 export const metadata = genPageMetadata({ title: 'About' })
 

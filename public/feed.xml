@@ -1,0 +1,344 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Goduu&#39;s tree of knowledge</title>
+      <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes</link>
+      <description>A simple web site for growing knowledge</description>
+      <language>en-us</language>
+      <managingEditor>idcangussu+tree@hotmail.com (Igor Cangussu)</managingEditor>
+      <webMaster>idcangussu+tree@hotmail.com (Igor Cangussu)</webMaster>
+      <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://tailwind-nextjs-starter-blog.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Mushrooms suplement</guid>
+    <title>Mushrooms suplement</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Mushrooms suplement</link>
+    undefined
+    <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>health</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Return a type without mapping</guid>
+    <title>Return a type without mapping</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Return a type without mapping</link>
+    undefined
+    <pubDate>Sat, 08 Apr 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>typescript</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Babel</guid>
+    <title>Babel</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Babel</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>babel</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Barrel</guid>
+    <title>Barrel</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Barrel</link>
+    
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>typescript</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Clean Code</guid>
+    <title>Clean Code</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Clean Code</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>javascript</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Coalescing operator</guid>
+    <title>Coalescing operator ??</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Coalescing operator</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>javascript</category><category>typescript</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Create function component</guid>
+    <title>Create function component</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Create function component</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>react</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/E2E TTL</guid>
+    <title>E2E TTL</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/E2E TTL</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>test</category><category>e2e</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Edit texts in browser console</guid>
+    <title>Edit text in browser console</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Edit texts in browser console</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>frontend</category><category>browser</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Failure Journal</guid>
+    <title>Failure Journal</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Failure Journal</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>learning</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Git workflow</guid>
+    <title>Git workflow</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Git workflow</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>git</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/HTTPS</guid>
+    <title>HTTPS</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/HTTPS</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>cybersecurity</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Happiness perception</guid>
+    <title>Happiness perception</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Happiness perception</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>philosophy</category><category>happiness</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Is High Quality Software Worth the Cost</guid>
+    <title>Is high quality software worth the cost?</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Is High Quality Software Worth the Cost</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>quality</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Love by Spinoza</guid>
+    <title>Love by Spinoza</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Love by Spinoza</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>philosophy</category><category>love</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Mark Twain</guid>
+    <title>Long Letter Quote by Mark Twain</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Mark Twain</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>philosophy</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Npm</guid>
+    <title>Publish package on npm</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Npm</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>npm</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/OWASP Web Application Security Testing Checklist</guid>
+    <title>OWASP Web application security testing checklist</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/OWASP Web Application Security Testing Checklist</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>cybersecurity</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Petite Phrase</guid>
+    <title>How we see the things</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Petite Phrase</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>philosophy</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Playwright</guid>
+    <title>Show report on playwright</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Playwright</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>playwright</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Promise.all vs promisse.allSettled</guid>
+    <title>Promise all() vs allSettled()</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Promise.all vs promisse.allSettled</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>rest</category><category>promise</category><category>async</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React Life Cycle</guid>
+    <title>React lifecycle hooks</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React Life Cycle</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>react</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React Memoization</guid>
+    <title>Memoization</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React Memoization</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>react</category><category>memoization</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React Optimization</guid>
+    <title>Optimization</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React Optimization</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>react</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React batch update</guid>
+    <title>Update two states after fetch</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React batch update</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>react</category><category>async</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React key property</guid>
+    <title>Key property</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React key property</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>react</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React virtualization</guid>
+    <title>Virtualization</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React virtualization</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>react</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Risk</guid>
+    <title>Risk</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Risk</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>investment</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/TS enforcing a type or another</guid>
+    <title>Ts enforcing a type or another</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/TS enforcing a type or another</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>typescript</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Test bundle time</guid>
+    <title>Test bundle time</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Test bundle time</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>build</category><category>bash</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/The sense of life</guid>
+    <title>The sense of life</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/The sense of life</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>philosophy</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Webpack</guid>
+    <title>Webpack</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Webpack</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>webpack</category><category>frontend</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/five-superpowers-in-investments</guid>
+    <title>5 superpowers in investments</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/five-superpowers-in-investments</link>
+    
+    <pubDate>Tue, 08 Mar 2016 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>investment</category>
+  </item>
+
+    </channel>
+  </rss>

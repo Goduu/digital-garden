@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Goduu&#39;s tree of knowledge</title>
+      <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes</link>
+      <description>A simple web site for growing knowledge</description>
+      <language>en-us</language>
+      <managingEditor>idcangussu+tree@hotmail.com (Igor Cangussu)</managingEditor>
+      <webMaster>idcangussu+tree@hotmail.com (Igor Cangussu)</webMaster>
+      <lastBuildDate>Sun, 01 Jan 2023 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://tailwind-nextjs-starter-blog.vercel.app/tags/learning/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Failure Journal</guid>
+    <title>Failure Journal</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Failure Journal</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>learning</category>
+  </item>
+
+    </channel>
+  </rss>

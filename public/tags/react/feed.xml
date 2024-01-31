@@ -1,0 +1,84 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Goduu&#39;s tree of knowledge</title>
+      <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes</link>
+      <description>A simple web site for growing knowledge</description>
+      <language>en-us</language>
+      <managingEditor>idcangussu+tree@hotmail.com (Igor Cangussu)</managingEditor>
+      <webMaster>idcangussu+tree@hotmail.com (Igor Cangussu)</webMaster>
+      <lastBuildDate>Sun, 01 Jan 2023 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://tailwind-nextjs-starter-blog.vercel.app/tags/react/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Create function component</guid>
+    <title>Create function component</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Create function component</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>react</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React Life Cycle</guid>
+    <title>React lifecycle hooks</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React Life Cycle</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>react</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React Memoization</guid>
+    <title>Memoization</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React Memoization</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>react</category><category>memoization</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React Optimization</guid>
+    <title>Optimization</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React Optimization</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>react</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React batch update</guid>
+    <title>Update two states after fetch</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React batch update</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>react</category><category>async</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React key property</guid>
+    <title>Key property</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React key property</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>react</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React virtualization</guid>
+    <title>Virtualization</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/React virtualization</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>react</category>
+  </item>
+
+    </channel>
+  </rss>

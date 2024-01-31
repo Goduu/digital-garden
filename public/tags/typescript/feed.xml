@@ -1,0 +1,54 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Goduu&#39;s tree of knowledge</title>
+      <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes</link>
+      <description>A simple web site for growing knowledge</description>
+      <language>en-us</language>
+      <managingEditor>idcangussu+tree@hotmail.com (Igor Cangussu)</managingEditor>
+      <webMaster>idcangussu+tree@hotmail.com (Igor Cangussu)</webMaster>
+      <lastBuildDate>Sun, 01 Jan 2023 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://tailwind-nextjs-starter-blog.vercel.app/tags/typescript/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Barrel</guid>
+    <title>Barrel</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Barrel</link>
+    
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>typescript</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Coalescing operator</guid>
+    <title>Coalescing operator ??</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Coalescing operator</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>javascript</category><category>typescript</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Return a type without mapping</guid>
+    <title>Return a type without mapping</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Return a type without mapping</link>
+    undefined
+    <pubDate>Sat, 08 Apr 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>typescript</category>
+  </item>
+
+  <item>
+    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/TS enforcing a type or another</guid>
+    <title>Ts enforcing a type or another</title>
+    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/TS enforcing a type or another</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>typescript</category>
+  </item>
+
+    </channel>
+  </rss>
