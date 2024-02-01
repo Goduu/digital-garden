@@ -1,39 +1,49 @@
 ---
-title: React lifecycle hooks
-date: 2023-01-01
+title: React Lifecycle Hooks
+date: 2024-01-22
 tags: ['react']
+summary: "A concise guide to transitioning from React class component lifecycle methods to equivalent functional component hooks, focusing on initialization, update, and cleanup phases."
 ---
 
-### componentWillMount
+In React's evolution from class components to functional components, hooks have become the standard for managing component lifecycle events. This guide outlines how to use hooks as modern equivalents to traditional lifecycle methods.
+
+### Before a Component Renders (componentWillMount)
+
+Previously handled by `componentWillMount` in class components, setup work before the initial render in functional components can now be managed with `useLayoutEffect`. It runs synchronously immediately after all DOM mutations, ensuring that any changes are applied before the screen is updated.
 
 ```javascript
 useLayoutEffect(() => {
-    …
-  },[])
+  // Your code here
+}, []);
 ```
 
-### componentDidMount
-
-```javascript
- useEffect(() => {
-    …
-  }, [])
-```
-
-### componentWillUpdate
+### After a Component Renders (componentDidMount)
+componentDidMount is mirrored by useEffect with an empty dependency array. This hook runs after the first render and is perfect for fetching data, adding event listeners, or other side effects that should occur once on mount.
 
 ```javascript
 useEffect(() => {
-    …
-  }, [variavel])
+  // Your code here
+}, []);
 ```
 
-### componentWillUnmount
+### Before a Component Updates (componentWillUpdate)
+React does not offer a direct hook equivalent for componentWillUpdate due to its potential for misuse. However, useEffect can be used to perform actions in response to changes in specific variables, closely mirroring the update phase.
+  
+  ```javascript
+  useEffect(() => {
+  // Your code here
+}, [variable]); // Run effect on variable change
+```
 
-```javascript
-useEffect(() => {
+### Before a Component Unmounts (componentWillUnmount)
+Cleanup actions, such as removing event listeners or canceling API requests, are handled in the cleanup function of useEffect. This function is returned within the useEffect hook and runs when the component unmounts.
+  
+  ```javascript
+  useEffect(() => {
   return () => {
-    …
-  }
-},[])
+    // Your cleanup code here
+  };
+}, []);
 ```
+
+By adopting these hooks, developers can effectively manage component lifecycle events in functional components, leveraging the flexibility and power of React's modern API.

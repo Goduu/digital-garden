@@ -1,7 +1,37 @@
 ---
-title: Create function component
-date: 2023-01-01
+title: Create Function Component
+date: 2023-10-27
 tags: ['react']
+summary: "A quick guide on utilizing the 'rfce' shortcut to efficiently generate a React functional component, streamlining the development process."
 ---
 
-`rfce`
+In modern React development, functional components have become the standard for creating
+ reusable and efficient UI components due to their simplicity and access to hooks.
+ A popular way to quickly scaffold a React functional component is by using the `rfce` shortcut, 
+  provided by various code editors and extensions like ES7 React/Redux/GraphQL/React-Native snippets.
+
+When you type `rfce` in a JavaScript or JSX file in an editor that supports this snippet, 
+it automatically expands to a boilerplate for a React functional component. 
+Here's what the expanded code typically looks like:
+
+```jsx
+import React from 'react';
+
+function ComponentName() {
+  return <div></div>;
+}
+
+export default ComponentName;
+```
+
+This boilerplate provides the basic structure for a functional component, including 
+the import statement for React, the component function itself, and the export statement. 
+Developers can then immediately start adding logic, state, props, and JSX to the component.
+
+Using shortcuts like rfce not only saves time but also encourages consistency in component 
+structure across a project, enhancing readability and maintainability of the codebase.
+
+To utilize this shortcut, ensure your development environment is set up with the 
+appropriate plugins or extensions that support React snippets. 
+This small efficiency can significantly speed up the process of creating new components 
+in your React applications.

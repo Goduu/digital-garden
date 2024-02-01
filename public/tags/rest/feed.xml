@@ -2,18 +2,18 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>Goduu&#39;s tree of knowledge</title>
-      <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes</link>
+      <link>https://digital-garden-chi-seven.vercel.app//leaveNotes</link>
       <description>A simple web site for growing knowledge</description>
       <language>en-us</language>
       <managingEditor>idcangussu+tree@hotmail.com (Igor Cangussu)</managingEditor>
       <webMaster>idcangussu+tree@hotmail.com (Igor Cangussu)</webMaster>
       <lastBuildDate>Sun, 01 Jan 2023 00:00:00 GMT</lastBuildDate>
-      <atom:link href="https://tailwind-nextjs-starter-blog.vercel.app/tags/rest/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://digital-garden-chi-seven.vercel.app//tags/rest/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Promise.all vs promisse.allSettled</guid>
+    <guid>https://digital-garden-chi-seven.vercel.app//leaveNotes/fleeting-notes/Promise.all vs promisse.allSettled</guid>
     <title>Promise all() vs allSettled()</title>
-    <link>https://tailwind-nextjs-starter-blog.vercel.app/leaveNotes/fleeting-notes/Promise.all vs promisse.allSettled</link>
+    <link>https://digital-garden-chi-seven.vercel.app//leaveNotes/fleeting-notes/Promise.all vs promisse.allSettled</link>
     undefined
     <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>

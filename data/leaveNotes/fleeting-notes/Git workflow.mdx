@@ -1,29 +1,42 @@
 ---
-title: Git workflow
-date: 2023-01-01
+title: Git Workflow
+date: 2023-07-14
 tags: ['git']
+summary: Explore advanced Git commands to refine your workflow, including amending commits, using fixup for PR reviews, rebasing with autosquash, and safely updating remote references using --force-with-lease.
 ---
 
-Adds the changes to the latest commit. (can change the message)
+Git provides a robust set of commands for managing and refining your codebase, making collaboration and version control more efficient. Here are some advanced techniques to enhance your Git workflow:
 
+- **Amending Commits**: If you need to modify the most recent commit—whether it's the message or the content—use:
+  
 ```console
-git commit --amend
+  git commit --amend
 ```
+This command allows you to adjust the last commit without creating a new one.
 
-For PR review purposes. Adds a commit fixing the HASH commit up.
+- **Fixup Commits for PR Reviews**: For a cleaner PR review process, you can add a commit that specifically addresses changes needed from a previous commit using:
 
 ```console
 git commit --fixup HASH
 ```
 
-Rebase with main and autosquash any fixups and merges on branch
+Replace HASH with the commit ID you're correcting. This helps in organizing and consolidating changes during reviews.
+
+- ***Rebasing with Autosquash***: To integrate and clean up your commit history, especially before merging a feature branch back to the main branch, use:
 
 ```console
 git rebase --autosquash -i main
-```
+````
 
-Without specifying the details, will protect all remote refs that are going to be updated by requiring their current value to be the same as the remote-tracking branch we have for them.
+This command rebases your current branch onto main, automatically squashing commits marked as fixups.
 
-```
+- ***Safe Force Pushing with --force-with-lease***: When you need to force push but want to ensure you're not overwriting others' work, this option offers a safer alternative:
+
+```console
 --force-with-lease
 ```
+
+It checks that the remote branch hasn't been updated before pushing your changes, reducing the risk of disrupting the work of others.
+
+These commands are invaluable for maintaining a clean and efficient Git repository, ensuring that your project's history is both manageable and understandable.
+

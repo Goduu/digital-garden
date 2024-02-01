@@ -1,39 +1,47 @@
 ---
-title: Return a type without mapping
-date: 2023-04-08
+title: Return a Type Without Mapping
+date: 2023-07-14
 tags: ['typescript']
-
+summary: "Demonstrates a TypeScript strategy for sorting an array of users by a formatted name without remapping the entity or altering the original user type, utilizing advanced type capabilities for efficient data handling."
 ---
 
-For example, we have a user:
+In TypeScript, managing data transformations while preserving type integrity can be challenging, especially when dealing with operations like sorting an array of objects based on a new property. Consider the case where we have a `User` type and a requirement to sort users by a formatted name. The goal is to perform this operation without remapping the entity or altering the original type, ensuring that the function can return the `User` type while internally using an augmented version of this type for sorting.
+
+Given a user object:
 
 ```ts
-user: {
-	id: string,
-	firstName: string,
-	lastName: string
-}
+type User = {
+  id: string;
+  firstName: string;
+  lastName: string;
+};
 ```
 
-and a function to format its name:
+And a function to format the user's name:
 
 ```ts
-const formatUserName = (user: User) => {
-	...
-}
+const formatUserName = (user: User) => `${user.firstName} ${user.lastName}`;
 ```
 
-To sort users and return `User` without remaping the entity and without reusing the formatUser in every sort evaluation we can:
+We aim to sort users by the formatted name without changing the User type. To achieve this, we extend the User type within our sorting function, adding a formattedName property for internal use only. This approach allows us to utilize the formatted name for sorting while maintaining the original user type as the function's return type:
 
 ```ts
-export function sortUsers<U extends UserNameProps>(users: U[] | undefined): U[] {
+export function sortUsers<U extends User>(users: U[] | undefined): U[] {
   return [...(users || [])]
-    .map((user) => ({
+    .map(user => ({
       ...user,
-      formattedName: formatUserName(user),
+      formattedName: formatUserName(user), // Temporarily augment the type with formattedName
     }))
     .sort((a, b) => a.formattedName.localeCompare(b.formattedName))
+    .map(({ formattedName, ...rest }) => rest); // Strip the formattedName before returning
 }
 ```
 
-It ignores the new added `formattedName` prop by enforcing the function return type.
+This technique leverages TypeScript's generics and type manipulation capabilities to ensure that:
+
+The input type is respected, allowing the function to accept an array of User or any subtype thereof.
+The sorting is performed based on a dynamically calculated property (formattedName) without affecting the original data structure or type.
+The returned array maintains the original type, U[], without exposing the internally used formattedName.
+By enforcing the function's return type and cleverly manipulating types within the function, we can sort users by a derived property efficiently and safely, showcasing the power and flexibility of TypeScript in handling complex data operations.
+
+This approach optimizes performance and type safety, ensuring that the function remains versatile and reusable without imposing additional runtime costs associated with repeated evaluations or unnecessary type alterations.

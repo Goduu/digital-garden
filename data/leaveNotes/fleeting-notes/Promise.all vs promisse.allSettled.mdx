@@ -1,18 +1,49 @@
 ---
 title: Promise all() vs allSettled()
-date: 2023-01-01
-tags: ['rest', 'promise', 'async']
+date: 2024-02-01
+tags: ['REST', 'javascript', 'ascync']
+summary: "A comparative overview of `Promise.all()` and `Promise.allSettled()`, highlighting their 
+use cases in handling multiple promises in JavaScript asynchronous operations."
 ---
 
-### all()
+In JavaScript's asynchronous world, managing multiple promises efficiently is crucial for 
+optimizing web application performance and user experience. Two important methods for handling 
+collections of promises are `Promise.all()` and `Promise.allSettled()`. Each serves a 
+unique purpose in the asynchronous workflow, tailored to different requirements and scenarios.
 
-This returned promise fulfills when all of the input's promises fulfill. If one fails, we don't get any results.
+### `Promise.all()`
 
-- Good to use when we need the result of EVERY request to proceed.
+`Promise.all()` is a method used when working with multiple promises concurrently. It takes an 
+iterable of promises as an input and returns a single Promise that:
 
-### allSettled
+- **Fulfills** when all input promises have fulfilled. In this case, the returned promise 
+resolves with an array containing the values of the input promises in the same order.
+- **Rejects** as soon as one of the input promises rejects. The returned promise is rejected with 
+the reason of the first promise that rejects.
 
-This returned promise fulfills when all of the input's promises settle (including when an empty iterable is passed), with an array of objects that describe the outcome of each promise.
-We all get results, but we need to check if it fails or succeeded.
+**Use Case**: `Promise.all()` is ideal when all asynchronous operations need to succeed for 
+the program to proceed. It's commonly used in scenarios where the failure of any single 
+operation means the collective task cannot be completed or doesn't make sense to continue.
 
-- Good when we can still proceed with partial results.
+### `Promise.allSettled()`
+
+Introduced in ES2020, `Promise.allSettled()` differs from `Promise.all()` by how it handles 
+the resolution and rejection of input promises. It also takes an iterable of promises but returns a promise that:
+
+- **Always fulfills** after all input promises have settled (either fulfilled or rejected). The 
+resolved value is an array of objects, each describing the outcome of each promise with a status of 
+either "fulfilled" or "rejected" and a corresponding value or reason.
+
+**Use Case**: `Promise.allSettled()` is useful when you need to perform multiple operations independently 
+and want to know the outcome of each, regardless of whether they succeed or fail. This method is suitable 
+for scenarios where partial success is acceptable, or you need to perform cleanup or follow-up actions 
+based on individual results.
+
+**Comparison**: While `Promise.all()` is strict in requiring all promises to fulfill, `Promise.allSettled()` 
+offers a more flexible approach, allowing developers to handle both successes and failures collectively. 
+The choice between the two depends on whether the completion of your operation requires all tasks to succeed or 
+can tolerate some failures.
+
+Understanding the distinctions and appropriate use cases for `Promise.all()` and `Promise.allSettled()` enables 
+developers to write more robust, efficient, and resilient asynchronous code, adeptly managing multiple concurrent 
+operations.

@@ -55,7 +55,7 @@ export const Card: FC<Project> = ({ title, description, imgSrc, technologies, hr
             className="text-base font-medium leading-6 text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
             aria-label={`Link to ${title}`}
           >
-            Learn more &rarr;
+            View Live &rarr;
           </Link>
         )}
       </div>

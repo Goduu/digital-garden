@@ -1,44 +1,46 @@
 ---
 title: Memoization
-date: 2023-01-01
+date: 2023-01-14
 tags: ['react', 'memoization']
+summary: "Understanding React's memoization approach with `memo()`, `useMemo`, and `useCallback`, and guidelines on their optimal usage to enhance performance by preventing unnecessary re-renders."
 ---
 
-- React memoization don't work like traditional memoization, it's just use comparing the last with the new values and avoid re-renders if the values are the same. It don't momoize all the already used values.
-- memo() just compares flat values
-- if the prop is an array or object we should use useMemo
+Memoization in React is a performance optimization technique that prevents unnecessary re-renders 
+by comparing current props or state with the next ones. However, React's memoization doesn't cache 
+all previously computed values like traditional memoization. Instead, it focuses on comparing the 
+last values with new ones to determine if a re-render is necessary.
 
-### When should we use useMemo ?
+- **React.memo()**: It is used for component memoization, comparing incoming props with previous ones. 
+`React.memo()` only does a shallow comparison, making it suitable for primitive props but less effective 
+for objects or arrays unless additional comparison logic is implemented.
 
-❌ Not use with primitive values which are compared by value
+- **useMemo**: This hook is designed for memoizing expensive calculations or values. 
+It compares dependencies across renders, and if they haven't changed, it skips recalculating 
+the value and uses the memoized result.
 
-```ts
-const value = useMemo(() => number1 + number2, [number1, number2])
-```
+### When to use useMemo
 
-✅ Use with an primitive values array calculation
+- **Avoid with Primitive Values**: Primitive values like strings, numbers, or booleans are efficiently compared by React, making `useMemo` unnecessary for simple calculations based on these types.
 
-```ts
-const value = useMemo(() => numbers.reduce((acc, number) => acc + number, 0), [numbers])
-```
+    ```ts
+    const value = useMemo(() => number1 + number2, [number1, number2]);
+    ```
 
-Try to always use useMemo when returning an array or object:
+- **Effective for Arrays and Objects**: Use `useMemo` for operations that return new arrays or objects to ensure referential equality between renders. This is crucial for optimizing performance when dealing with complex data structures or expensive computations.
 
-```ts
-const multpliedValues = userMemo(() => numbers.map((value) => value * 100), [numbers])
-```
-
-```ts
-const person = useMemo(
-  () => ({
-    first,
-    last,
-    full: `${first} ${last}`,
-  }),
-  [first, last]
-)
-```
+    ```ts
+    const value = useMemo(() => numbers.reduce((acc, number) => acc + number, 0), [numbers]);
+    const multipliedValues = useMemo(() => numbers.map((value) => value * 100), [numbers]);
+    const person = useMemo(() => ({ first, last, full: `${first} ${last}` }), [first, last]);
+    ```
 
 ## useCallback
 
-Maintain the reference for functions, similar to useMemo
+- **useCallback**: Similar to `useMemo`, but specifically for memoizing functions. 
+`useCallback` ensures that a function's reference remains constant between renders unless 
+its dependencies change. This is particularly useful for passing callbacks to optimized child 
+components that rely on reference equality to prevent unnecessary renders.
+
+React's memoization tools, when used appropriately, can significantly enhance your application's 
+performance by reducing the number of re-renders. Understanding when and how to apply `React.memo()`, 
+`useMemo`, and `useCallback` is key to leveraging React's re-render optimization capabilities effectively.

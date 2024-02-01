@@ -1,15 +1,15 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: "Goduu's tree of knowledge",
+  title: 'Digital Garden',
   author: 'Igor Cangussu',
   headerTitle: 'Digital Garden',
   description: 'A simple web site for growing knowledge',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
+  siteUrl: 'https://digital-garden-chi-seven.vercel.app',
+  siteRepo: 'https://github.com/Goduu/digital-garden',
   siteLogo: '/static/images/logo_light.svg',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/social_banner.png',
   mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'idcangussu+tree@hotmail.com',
   github: 'https://github.com/goduu',
@@ -26,7 +26,7 @@ const siteMetadata = {
       umamiWebsiteId: process.env.NEXT_UMAMI_ID, // e.g. 123e4567-e89b-12d3-a456-426614174000
     },
     // plausibleAnalytics: {
-    //   plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
+    //   plausibleDataDomain: '', // e.g. digital-garden-chi-seven.vercel.app/
     // },
     // simpleAnalytics: {},
     // posthogAnalytics: {

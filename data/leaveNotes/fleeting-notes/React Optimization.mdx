@@ -1,12 +1,17 @@
 ---
 title: Optimization
-date: 2023-01-01
+date: 2024-01-08
 tags: ['react']
+summary: "An overview of React's Profiler tag for performance optimization, providing insights into component rendering times and helping identify bottlenecks."
 ---
 
-Profiler Tag Give information about the page loading etc.
+React's Profiler tag is a powerful tool for identifying performance bottlenecks in your application. It measures the cost of rendering your components, helping you understand where optimizations can be made to improve performance. By wrapping components with the Profiler tag, you can collect detailed statistics about the rendering process of your application's UI.
+
+Here's how to use the Profiler's `onRender` callback function to gather performance data:
 
 ```ts
+import React, { Profiler } from 'react';
+
 function onRenderCallback(
   id, // the "id" prop of the Profiler tree that has just committed
   phase, // either "mount" (if the tree just mounted) or "update" (if it re-rendered)
@@ -16,6 +21,24 @@ function onRenderCallback(
   commitTime, // when React committed this update
   interactions // the Set of interactions belonging to this update
 ) {
-  // Aggregate or log render timings...
+  // Implementation example: Log render timings to the console
+  console.log(`Rendering ${id} took ${actualDuration}ms`);
 }
+
+// Example usage
+<Profiler id="MyComponent" onRender={onRenderCallback}>
+  <MyComponent />
+</Profiler>
 ```
+
+The onRender callback provides valuable insights:
+
+- id: Identifies the part of the component tree being profiled.
+- phase: Indicates whether the component is mounting or updating.
+- actualDuration & baseDuration: Provide timing information that helps assess the impact of optimizations.
+- startTime & commitTime: Offer a timeline of the rendering process.
+- interactions: Lists the events that triggered the render.
+
+This information enables developers to pinpoint inefficient rendering phases and optimize component performance. Implementing the Profiler in development environments can significantly enhance the user experience by reducing load times and improving responsiveness.
+
+React's Profiler is an essential tool for developers looking to optimize their applications, ensuring smooth and efficient operation even in complex and dynamic UIs.

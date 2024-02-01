@@ -1,9 +1,23 @@
 ---
-title: Edit text in browser console
-date: 2023-01-01
+title: Edit Text in Browser Console
+date: 2023-07-14
 tags: ['frontend', 'browser']
+summary: "A quick guide on enabling text editing within any webpage using a simple JavaScript command in the browser console, offering a convenient way for developers to experiment with content changes."
 ---
+
+Enabling text editing directly on a webpage can be a useful trick for developers, designers, or content creators looking to make quick modifications without diving into the source code. This functionality can be activated with a simple JavaScript command executed in the browser's console:
 
 ```js
 document.designMode = 'on'
 ```
+
+Activating designMode sets the entire document into an editable state, allowing you to click on any text and start typing to make changes. This can be particularly handy for experimenting with copy changes, proofreading, or adjusting layout directly in the browser window.
+
+To revert the page back to its non-editable state, simply run:
+
+```js
+document.designMode = 'off'
+```
+
+This toggles the design mode off, returning the page to its default, static condition. While changes made in this mode are temporary and not saved to the server, they offer a flexible and immediate way to visualize adjustments in the browser environment.
+
