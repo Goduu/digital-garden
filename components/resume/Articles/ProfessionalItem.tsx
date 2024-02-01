@@ -16,28 +16,30 @@ const ProfessionalItem: FC<ProfessionalExperience> = ({
   return (
     <article className="border-neutral-6 border-t-2 py-6 first-of-type:border-none last-of-type:pb-0">
       <Heading level={3}>
-        <span className="rounded-md bg-zinc-400 px-2 text-slate-50 dark:bg-slate-50 dark:text-slate-950">
+        <div className="rounded-md bg-zinc-400 px-2 text-slate-50 dark:bg-slate-50 dark:text-slate-950">
           {title}
-        </span>
-        <span>
+        </div>
+        <div>
           at{' '}
           <a href={organizationUrl} className="text-blue-500" target="_blank">
             {organization}
           </a>
-        </span>
+        </div>
       </Heading>
 
-      <div className="mt-1 flex items-center gap-2 font-medium tracking-wide">
-        <FaCalendar />
-        {startDate}–{!endDate ? 'Current' : endDate}
-        <div className="ml-auto flex items-center gap-2">
+      <div className="mt-1 flex flex-col md:flex-row items-center gap-2 font-medium tracking-wide">
+        <div className='flex gap-2 items-center'>
+          <FaCalendar />
+          {startDate}–{!endDate ? 'Current' : endDate}
+        </div>
+        <div className="md:ml-auto md:justify-normal justify-center flex items-center gap-2 flex-wrap">
           {technologies.map((technology) => (
-            <span
+            <div
               key={technology}
               className="text-neutral-5 border-neutral-5 rounded-md border px-2 py-1 text-sm"
             >
               {technology}
-            </span>
+            </div>
           ))}
         </div>
       </div>

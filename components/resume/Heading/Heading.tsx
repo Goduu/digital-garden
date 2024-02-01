@@ -5,6 +5,7 @@ export type HeadingProps = {
   level?: 1 | 2 | 3 | 4 | 5 | 6
   color?: 'danger' | 'neutral' | 'neutralSubtle' | 'primary'
 }
+
 const variants = {
   color: {
     danger: 'text-danger-11',
@@ -24,11 +25,12 @@ const variants = {
 
 export function Heading({ children, level, color }: PropsWithChildren<HeadingProps>) {
   // make a background the counter-color of the main theme background with border-radius and the text visible accordingly
-  const elementClass = 'flex items-center gap-2'
+  const elementClass = 'flex flex-col items-center justify-center gap-2 md:flex-row '
   const classes = twMerge(
     elementClass,
     variants.color[color ?? 'neutral'],
     variants.size[level ?? 3]
   )
+
   return createElement(`h${level}`, { className: classes }, children)
 }

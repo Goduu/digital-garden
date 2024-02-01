@@ -8,9 +8,7 @@ import { MDXLayoutRenderer } from 'pliny/mdx-components'
 export const AdditionalInfo: FC = () => {
   return (
     <article>
-      <div className="mt-1 flex items-center gap-2 font-medium tracking-wide">
-        <SectionHeading icon={FaPaintBrush} level={2} text={additionalInfo.title} />
-      </div>
+      <SectionHeading icon={FaPaintBrush} level={2} text={additionalInfo.title} />
 
       <MDXLayoutRenderer code={additionalInfo.body.code} />
     </article>
