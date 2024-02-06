@@ -15,13 +15,11 @@ const projectsData: Project[] = [
     href: 'https://trattoria-goduu.vercel.app/',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    technologies: [],
-    href: '/blog/the-time-machine',
+    title: 'Evolionary Algorithm',
+    description: `What if genetics mixes with computer science? This is a simple evolutionary algorithm that solve the knapsack problem.`,
+    imgSrc: '/static/images/evolutionary-algorithm.png',
+    technologies: ['Next.js', 'Tailwind CSS', 'TypeScript', 'Python', 'FastAPI', 'WebSocket'],
+    href: 'https://evolutionary-algorithm.vercel.app/',
   },
 ]
 
