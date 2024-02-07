@@ -17,7 +17,7 @@ const projectsData: Project[] = [
   {
     title: 'Evolionary Algorithm',
     description: `What if genetics mixes with computer science? This is a simple evolutionary algorithm that solve the knapsack problem.`,
-    imgSrc: '/static/images/evolutionary-algorithm.png',
+    imgSrc: '/static/images/evolutionary-algorithm.jpg',
     technologies: ['Next.js', 'Tailwind CSS', 'TypeScript', 'Python', 'FastAPI', 'WebSocket'],
     href: 'https://evolutionary-algorithm.vercel.app/',
   },
