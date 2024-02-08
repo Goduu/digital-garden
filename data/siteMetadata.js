@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Digital Garden',
   author: 'Igor Cangussu',
   headerTitle: 'Digital Garden',
-  description: 'A simple web site for growing knowledge',
+  description: 'A simple web page for growing knowledge',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://digital-garden-chi-seven.vercel.app',

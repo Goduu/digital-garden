@@ -26,6 +26,7 @@ export default function Portfolio() {
                 imgSrc={d.imgSrc}
                 technologies={d.technologies}
                 href={d.href}
+                npmUrl={d.npmUrl}
               />
             ))}
           </div>
