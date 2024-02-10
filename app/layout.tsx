@@ -1,5 +1,6 @@
 import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
+import 'aura-beam-annotator/dist/tailwind.css'
 
 import { Space_Grotesk } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'

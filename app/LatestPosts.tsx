@@ -1,7 +1,7 @@
 import { LinkArrow } from '@/components/LinkArrow'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
-import { AuraBeamAnnotator, AuraBeamVerticalDivider } from 'aura-beam-annotator'
+import { AuraBeamAnnotator, AuraBeamBody, AuraBeamTitle, AuraBeamVerticalDivider } from 'aura-beam-annotator'
 import Link from 'next/link'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
 import { formatDate } from 'pliny/utils/formatDate'
@@ -18,31 +18,31 @@ const LatestPosts: FC<LatestPostProps> = ({ posts }) => {
     return (
         <div>
             <div >
-                <AuraBeamAnnotator color="teal" title="Latest Notes" positioning='right'>
-                    The latest notes I've written. I hope you can get something out of them!
-                </AuraBeamAnnotator>
                 <AuraBeamVerticalDivider color='teal' direction='r-to-l' />
-                <ul>
+                <AuraBeamAnnotator color='teal'>
+                    <AuraBeamTitle title="Latest Notes" />
+                    <AuraBeamBody>
+                        The latest notes I've written. I hope you can get something out of them!
+                    </AuraBeamBody>
                     {!posts.length && 'No posts found.'}
                     {posts.slice(0, MAX_DISPLAY).map((post) => {
                         const { slug, date, title, summary, tags } = post
                         return (
-                            <AuraBeamAnnotator color="teal" key={post.title} title={
-                                <Link
-                                    href={`/leaveNotes/${slug}`}
-                                    className="text-gray-900 dark:text-gray-100"
-                                >
-                                    {title}
-                                </Link>}>
-                                <li key={slug} className="py-12">
+                            <AuraBeamAnnotator color='teal'>
+                                <AuraBeamTitle title={
+                                    <Link
+                                        href={`/leaveNotes/${slug}`}
+                                        className="text-gray-900 dark:text-gray-100"
+                                    >
+                                        {title}
+                                    </Link>}
+                                    type='secondary' />
+                                <AuraBeamBody>
                                     <article>
                                         <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                                            <dl>
-                                                <dt className="sr-only">Published on</dt>
-                                                <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                                                    <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
-                                                </dd>
-                                            </dl>
+                                            <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                                                <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                                            </dd>
                                             <div className="space-y-5 xl:col-span-3">
                                                 <div className="space-y-6">
                                                     <div>
@@ -62,11 +62,11 @@ const LatestPosts: FC<LatestPostProps> = ({ posts }) => {
                                             </div>
                                         </div>
                                     </article>
-                                </li>
+                                </AuraBeamBody>
                             </AuraBeamAnnotator>
                         )
                     })}
-                </ul>
+                </AuraBeamAnnotator>
             </div>
             {posts.length > MAX_DISPLAY && (
                 <div className="flex justify-end text-base font-medium leading-6">
@@ -79,7 +79,6 @@ const LatestPosts: FC<LatestPostProps> = ({ posts }) => {
                     </Link>
                 </div>
             )}
-
         </div>
     )
 }
