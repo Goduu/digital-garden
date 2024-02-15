@@ -3,7 +3,6 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { AuraBeamAnnotator, AuraBeamBody, AuraBeamTitle, AuraBeamVerticalDivider } from 'aura-beam-annotator'
 import Link from 'next/link'
-import NewsletterForm from 'pliny/ui/NewsletterForm'
 import { formatDate } from 'pliny/utils/formatDate'
 import React, { FC } from 'react'
 

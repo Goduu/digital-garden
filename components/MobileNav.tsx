@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from './Link'
-import headerNavLinks from '@/data/headerNavLinks'
+import { headerNavLinks } from '@/data/headerNavLinks'
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
@@ -36,9 +36,8 @@ const MobileNav = () => {
         </svg>
       </button>
       <div
-        className={`fixed left-0 top-0 z-10 h-full w-full transform bg-white opacity-95 duration-300 ease-in-out dark:bg-gray-950 dark:opacity-[0.98] ${
-          navShow ? 'translate-x-0' : 'translate-x-full'
-        }`}
+        className={`fixed left-0 top-0 z-10 h-full w-full transform bg-white opacity-95 duration-300 ease-in-out dark:bg-gray-950 dark:opacity-[0.98] ${navShow ? 'translate-x-0' : 'translate-x-full'
+          }`}
       >
         <div className="flex justify-end">
           <button className="mr-8 mt-11 h-8 w-8" aria-label="Toggle Menu" onClick={onToggleNav}>
