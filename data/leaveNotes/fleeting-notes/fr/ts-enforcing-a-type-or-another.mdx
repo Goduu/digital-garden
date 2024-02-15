@@ -1,11 +1,12 @@
 ---
-title: Ts enforcing a type or another
+title: Ts imposer un type ou un autre
 date: 2023-01-01
 tags: ['typescript']
+summary: 
 
 ---
 
-Making one type | another we enforce that this or that prop should be mandatory in one type but not on the other.
+En spécifiant un type ou un autre, nous imposons que telle ou telle propriété devrait être obligatoire dans un type mais pas dans l'autre.
 
 ```ts
 export type FormConfirmationProps<V extends FormValues> = {

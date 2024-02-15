@@ -1,0 +1,47 @@
+---
+title: Typ ohne Zuordnung zurückgeben
+date: 2023-07-14
+tags: ['typescript']
+summary: "Demonstrates a TypeScript strategy for sorting an array of users by a formatted name without remapping the entity or altering the original user type, utilizing advanced type capabilities for efficient data handling."
+---
+
+In TypeScript kann das Verwalten von Daten-Transformationen bei gleichzeitiger Beibehaltung der Typintegrität herausfordernd sein, insbesondere bei Operationen wie dem Sortieren eines Arrays von Objekten basierend auf einer neuen Eigenschaft. Betrachten Sie den Fall, in dem wir einen Benutzer-Typ haben und die Anforderung besteht, Benutzer nach einem formatierten Namen zu sortieren. Das Ziel ist es, diese Operation ohne Neuordnung der Entität oder Änderung des ursprünglichen Typs durchzuführen und sicherzustellen, dass die Funktion den Benutzer-Typ zurückgeben kann, während intern eine erweiterte Version dieses Typs für die Sortierung verwendet wird.
+
+Angenommen, wir haben ein Benutzerobjekt:
+
+```ts
+type User = {
+  id: string;
+  firstName: string;
+  lastName: string;
+};
+```
+
+Und eine Funktion zur Formatierung des Benutzernamens:
+
+```ts
+const formatUserName = (user: User) => `${user.firstName} ${user.lastName}`;
+```
+
+Wir möchten Benutzer nach dem formatierten Namen sortieren, ohne den Benutzertyp zu ändern. Um dies zu erreichen, erweitern wir den Benutzertyp innerhalb unserer Sortierfunktion, indem wir eine formattedName-Eigenschaft nur für den internen Gebrauch hinzufügen. Dieser Ansatz ermöglicht es uns, den formatierten Namen für das Sortieren zu verwenden, während der ursprüngliche Benutzertyp als Rückgabetyp der Funktion beibehalten wird:
+
+```ts
+export function sortUsers<U extends User>(users: U[] | undefined): U[] {
+  return [...(users || [])]
+    .map(user => ({
+      ...user,
+      formattedName: formatUserName(user), // Temporarily augment the type with formattedName
+    }))
+    .sort((a, b) => a.formattedName.localeCompare(b.formattedName))
+    .map(({ formattedName, ...rest }) => rest); // Strip the formattedName before returning
+}
+```
+
+Diese Technik nutzt die Generics und Typmanipulationsfähigkeiten von TypeScript, um sicherzustellen, dass:
+
+Der Eingabetyp respektiert wird, sodass die Funktion ein Array von Benutzern oder einer beliebigen Unterart davon akzeptieren kann.
+Die Sortierung basierend auf einer dynamisch berechneten Eigenschaft (formattedName) durchgeführt wird, ohne die ursprüngliche Datenstruktur oder den Typ zu beeinflussen.
+Das zurückgegebene Array den ursprünglichen Typ, U[], beibehält, ohne den intern verwendeten formattedName zu offenbaren.
+Durch die Erzwingung des Rückgabetyps der Funktion und das geschickte Manipulieren von Typen innerhalb der Funktion können wir Benutzer effizient und sicher nach einer abgeleiteten Eigenschaft sortieren und dabei die Leistung und Flexibilität von TypeScript bei der Handhabung komplexer Datenoperationen zeigen.
+
+Dieser Ansatz optimiert die Leistung und Typsicherheit und gewährleistet, dass die Funktion vielseitig und wiederverwendbar bleibt, ohne zusätzliche Laufzeitkosten für wiederholte Auswertungen oder unnötige Typänderungen zu verursachen.

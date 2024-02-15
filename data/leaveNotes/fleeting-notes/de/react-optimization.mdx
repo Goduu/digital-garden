@@ -1,0 +1,45 @@
+---
+title: Optimierung
+date: 2024-01-08
+tags: ['react']
+summary: "Ein Überblick über das Profiler-Tag von React zur Leistungsoptimierung, das Einblicke in die Rendierungszeiten von Komponenten bietet und hilft, Engpässe zu identifizieren."
+---
+
+Das Profiler-Tag von React ist ein leistungsstarkes Werkzeug zur Identifizierung von Leistungsengpässen in Ihrer Anwendung. Es misst die Kosten für das Rendern Ihrer Komponenten und hilft Ihnen zu verstehen, wo Optimierungen vorgenommen werden können, um die Leistung zu verbessern. Durch das Einwickeln von Komponenten mit dem Profiler-Tag können Sie detaillierte Statistiken über den Rendervorgang der Benutzeroberfläche Ihrer Anwendung sammeln.
+
+Hier erfahren Sie, wie Sie die `onRender`-Rückruffunktion des Profilers verwenden, um Leistungsdaten zu sammeln:
+
+```ts
+import React, { Profiler } from 'react';
+
+function onRenderCallback(
+  id, // the "id" prop of the Profiler tree that has just committed
+  phase, // either "mount" (if the tree just mounted) or "update" (if it re-rendered)
+  actualDuration, // time spent rendering the committed update
+  baseDuration, // estimated time to render the entire subtree without memoization
+  startTime, // when React began rendering this update
+  commitTime, // when React committed this update
+  interactions // the Set of interactions belonging to this update
+) {
+  // Implementation example: Log render timings to the console
+  console.log(`Rendering ${id} took ${actualDuration}ms`);
+}
+
+// Example usage
+<Profiler id="MyComponent" onRender={onRenderCallback}>
+  <MyComponent />
+</Profiler>
+```
+
+Die onRender-Rückruffunktion bietet wertvolle Einblicke:
+
+- id: Identifiziert den Teil des Komponentenbaums, der analysiert wird.
+- phase: Gibt an, ob die Komponente montiert oder aktualisiert wird.
+- actualDuration & baseDuration: Bieten Timing-Informationen, die helfen, die Auswirkungen von Optimierungen zu bewerten.
+- startTime & commitTime: Bieten einen Zeitplan des Rendervorgangs.
+- interactions: Listet die Ereignisse auf, die das Rendern ausgelöst haben.
+
+
+Diese Informationen ermöglichen es Entwicklern, ineffiziente Rendervorgänge zu lokalisieren und die Leistung der Komponenten zu optimieren. Die Implementierung des Profilers in Entwicklungsumgebungen kann das Benutzererlebnis erheblich verbessern, indem Ladezeiten verkürzt und die Reaktionsfähigkeit verbessert werden.
+
+Der Profiler von React ist ein unverzichtbares Werkzeug für Entwickler, die ihre Anwendungen optimieren möchten, und gewährleistet einen reibungslosen und effizienten Betrieb auch in komplexen und dynamischen Benutzeroberflächen.

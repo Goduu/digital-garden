@@ -1,0 +1,47 @@
+---
+title: Retornar um Tipo Sem Mapping
+date: 2023-07-14
+tags: ['typescript']
+summary: "Demonstra uma estratégia TypeScript para ordenar uma matriz de usuários por um nome formatado sem remapear a entidade ou alterar o tipo de usuário original, utilizando capacidades avançadas de tipo para manipulação eficiente de dados."
+---
+
+Em TypeScript, gerenciar transformações de dados enquanto preserva a integridade do tipo pode ser desafiador, especialmente ao lidar com operações como a ordenação de uma matriz de objetos com base em uma nova propriedade. Considere o caso em que temos um tipo Usuário e a necessidade de ordenar os usuários por um nome formatado. O objetivo é realizar essa operação sem remapear a entidade ou alterar o tipo de usuário original, garantindo que a função possa retornar o tipo Usuário enquanto internamente usa uma versão aprimorada desse tipo para ordenação.
+
+Dado um objeto de usuário:
+
+```ts
+type User = {
+  id: string;
+  firstName: string;
+  lastName: string;
+};
+```
+
+E uma função para formatar o nome do usuário:
+
+```ts
+const formatUserName = (user: User) => `${user.firstName} ${user.lastName}`;
+```
+
+Nosso objetivo é ordenar os usuários pelo nome formatado sem alterar o tipo de Usuário. Para isso, estendemos o tipo Usuário dentro de nossa função de ordenação, adicionando uma propriedade formattedName apenas para uso interno. Essa abordagem nos permite utilizar o nome formatado para a ordenação enquanto mantemos o tipo de usuário original como tipo de retorno da função:
+
+```ts
+export function sortUsers<U extends User>(users: U[] | undefined): U[] {
+  return [...(users || [])]
+    .map(user => ({
+      ...user,
+      formattedName: formatUserName(user), // Temporarily augment the type with formattedName
+    }))
+    .sort((a, b) => a.formattedName.localeCompare(b.formattedName))
+    .map(({ formattedName, ...rest }) => rest); // Strip the formattedName before returning
+}
+```
+
+Essa técnica aproveita as capacidades de genéricos e manipulação de tipo do TypeScript para garantir que:
+
+O tipo de entrada é respeitado, permitindo que a função aceite uma matriz de Usuário ou qualquer subtipo do mesmo.
+A ordenação é realizada com base em uma propriedade calculada dinamicamente (formattedName) sem afetar a estrutura de dados ou tipo original.
+A matriz retornada mantém o tipo original, U[], sem expor o formattedName usado internamente.
+Ao impor o tipo de retorno da função e manipular inteligentemente os tipos dentro da função, podemos ordenar os usuários por uma propriedade derivada de forma eficiente e segura, demonstrando o poder e a flexibilidade do TypeScript no tratamento de operações de dados complexas.
+
+Essa abordagem otimiza o desempenho e a segurança do tipo, garantindo que a função permaneça versátil e reutilizável sem impor custos adicionais associados a avaliações repetidas ou alterações de tipo desnecessárias.

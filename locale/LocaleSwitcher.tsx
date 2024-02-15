@@ -2,6 +2,10 @@
 import { FC, ReactNode, useEffect, useRef, useState } from "react"
 import { AppLocale, locales, useLocale, useTranslation } from "./state"
 import { BR, US, FR, DE, FlagComponent } from 'country-flag-icons/react/3x2'
+import { hasUrlLocale } from "./hasUrlLocale"
+import { usePathname } from "next/navigation"
+import { useRouter } from "next/navigation"
+
 
 const languageFlags: Record<AppLocale, ReactNode> = {
   "en": <US width={20} />, "fr": <FR width={20} />, "de": <DE width={20} />, "pt": <BR width={20} />
@@ -12,10 +16,16 @@ export const LocaleSwitcher: FC = () => {
   const { locale, setLocale } = useLocale()
   const [open, setOpen] = useState(false)
   const componentRef = useRef<HTMLDivElement>(null)
+  const router = useRouter()
+
+  const currentUrl = usePathname()
 
   const handleChangeLocale = (language: AppLocale) => {
     setLocale(language)
     setOpen(false)
+    if (hasUrlLocale(currentUrl)) {
+      router.push(currentUrl.replace(`/${locale}/`, `/${language}/`))
+    }
   }
 
   useEffect(() => {

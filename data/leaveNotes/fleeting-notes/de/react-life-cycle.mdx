@@ -1,0 +1,52 @@
+---
+title: React Lifecycle Hooks
+date: 2024-01-22
+tags: ['react']
+summary: "Ein prägnanter Leitfaden für den Übergang von React-Klassenkomponenten-Lebenszyklusmethoden zu äquivalenten funktionalen Komponenten-Hooks, mit Schwerpunkt auf den Initialisierungs-, Update- und Aufräumphasen."
+---
+
+Bei der Entwicklung von React von Klassenkomponenten zu funktionalen Komponenten sind Hooks zum Standard für die Verwaltung von Lebenszyklusereignissen von Komponenten geworden. Dieser Leitfaden zeigt, wie Hooks als moderne Äquivalente zu traditionellen Lebenszyklusmethoden verwendet werden können.
+
+### Vor dem Rendern einer Komponente (componentWillMount)
+
+Früher durch `componentWillMount` in Klassenkomponenten behandelt, kann die Einrichtungsarbeit vor dem ersten Rendern in funktionalen Komponenten jetzt mit `useLayoutEffect` verwaltet werden. Es wird synchron sofort nach allen DOM-Mutationen ausgeführt, um sicherzustellen, dass Änderungen angewendet werden, bevor der Bildschirm aktualisiert wird.
+
+```javascript
+useLayoutEffect(() => {
+  // Your code here
+}, []);
+```
+
+### Nach dem Rendern einer Komponente (componentDidMount)
+
+`componentDidMount` wird durch `useEffect` mit einem leeren Abhängigkeitsarray gespiegelt. Dieser Hook wird nach dem ersten Rendern ausgeführt und ist perfekt zum Abrufen von Daten, Hinzufügen von Ereignislistenern oder anderen Nebeneffekten, die einmalig beim Montieren auftreten sollen.
+
+```javascript
+useEffect(() => {
+  // Your code here
+}, []);
+```
+
+### Vor dem Aktualisieren einer Komponente (componentWillUpdate)
+
+React bietet kein direktes Hook-Äquivalent für `componentWillUpdate` aufgrund seines Potenzials für Missbrauch. `useEffect` kann jedoch verwendet werden, um Aktionen als Reaktion auf Änderungen in bestimmten Variablen auszuführen und die Aktualisierungsphase eng zu spiegeln.
+
+  ```javascript
+  useEffect(() => {
+  // Your code here
+}, [variable]); // Run effect on variable change
+```
+
+### Vor dem Demontieren einer Komponente (componentWillUnmount)
+
+Aufräumaktionen wie das Entfernen von Ereignislistenern oder das Abbrechen von API-Anfragen werden in der Cleanup-Funktion von `useEffect` behandelt. Diese Funktion wird im `useEffect`-Hook zurückgegeben und wird ausgeführt, wenn die Komponente demontiert wird.
+
+  ```javascript
+  useEffect(() => {
+  return () => {
+    // Your cleanup code here
+  };
+}, []);
+```
+
+Durch die Verwendung dieser Hooks können Entwickler Lebenszyklusereignisse von Komponenten in funktionalen Komponenten effektiv verwalten und die Flexibilität und Leistung der modernen React-API nutzen.

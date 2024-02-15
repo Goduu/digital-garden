@@ -10,6 +10,8 @@ import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import tagData from 'app/tag-data.json'
+import { genPageMetadata } from 'app/seo'
+import { PostSummaries } from 'app/Post/PostSummaries'
 
 interface PaginationProps {
   totalPages: number
@@ -61,6 +63,7 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
     </div>
   )
 }
+export const metadata = genPageMetadata({ title: 'Leaves' })
 
 export default function ListLayoutWithTags({
   posts,

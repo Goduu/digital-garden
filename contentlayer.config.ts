@@ -39,6 +39,10 @@ const computedFields: ComputedFields = {
     type: 'string',
     resolve: (doc) => doc._raw.sourceFilePath,
   },
+  locale: {
+    type: "string",
+    resolve: (doc) => doc._raw.flattenedPath.split("/")[2],
+  },
   toc: { type: 'string', resolve: (doc) => extractTocHeadings(doc.body.raw) },
 }
 
@@ -262,8 +266,8 @@ export default makeSource({
     ],
   },
   onSuccess: async (importData) => {
-    const { allBlogs } = await importData()
-    createTagCount(allBlogs)
-    createSearchIndex(allBlogs)
+    const { allDocuments } = await importData()
+    createTagCount(allDocuments)
+    createSearchIndex(allDocuments)
   },
 })

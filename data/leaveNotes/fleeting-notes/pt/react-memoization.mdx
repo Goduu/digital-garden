@@ -1,0 +1,34 @@
+---
+title: Memoização
+date: 2023-01-14
+tags: ['react', 'memoization']
+summary: "Compreendendo a abordagem de memoização do React com memo(), useMemo e useCallback, e diretrizes sobre seu uso ideal para aprimorar o desempenho evitando renderizações desnecessárias."
+---
+
+A memoização no React é uma técnica de otimização de desempenho que evita renderizações desnecessárias comparando as props ou estados atuais com os próximos. No entanto, a memoização do React não armazena em cache todos os valores previamente calculados como a memoização tradicional. Em vez disso, ela se concentra em comparar os últimos valores com os novos para determinar se uma nova renderização é necessária.
+
+- **React.memo()**: É usado para a memoização de componentes, comparando as props de entrada com as anteriores. React.memo() faz apenas uma comparação superficial, tornando-o adequado para props primitivas, mas menos eficaz para objetos ou arrays, a menos que lógica de comparação adicional seja implementada.
+
+- **useMemo**: Este hook é projetado para memoizar cálculos ou valores caros. Ele compara dependências entre renderizações, e se elas não mudaram, ele pula o recálculo do valor e usa o resultado memoizado.
+
+### Quando usar useMemo
+
+- **Evite com Valores Primitivos**: Valores primitivos como strings, números ou booleanos são eficientemente comparados pelo React, tornando o useMemo desnecessário para cálculos simples baseados nesses tipos.
+
+    ```ts
+    const value = useMemo(() => number1 + number2, [number1, number2]);
+    ```
+
+- **Eficaz para Arrays e Objetos**: Use `useMemo` para operações que retornam novos arrays ou objetos para garantir a igualdade referencial entre renderizações. Isso é crucial para otimizar o desempenho ao lidar com estruturas de dados complexas ou cálculos caros.
+
+    ```ts
+    const value = useMemo(() => numbers.reduce((acc, number) => acc + number, 0), [numbers]);
+    const multipliedValues = useMemo(() => numbers.map((value) => value * 100), [numbers]);
+    const person = useMemo(() => ({ first, last, full: `${first} ${last}` }), [first, last]);
+    ```
+
+## useCallback
+
+- **useCallback**: Semelhante ao `useMemo`, mas especificamente para memoizar funções. useCallback garante que a referência de uma função permaneça constante entre renderizações a menos que suas dependências mudem. Isso é particularmente útil para passar callbacks para componentes filhos otimizados que dependem da igualdade de referência para evitar renderizações desnecessárias.
+
+As ferramentas de memoização do React, quando usadas adequadamente, podem melhorar significativamente o desempenho de sua aplicação, reduzindo o número de novas renderizações. Entender quando e como aplicar `React.memo()`, `useMemo` e `useCallback` é fundamental para aproveitar eficazmente as capacidades de otimização de renderização do React.

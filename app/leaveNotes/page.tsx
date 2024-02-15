@@ -1,27 +1,29 @@
+"use client"
 import ListLayout from '@/layouts/ListLayoutWithTags'
-import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
+import { allCoreContent, sortPosts, omit } from 'pliny/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
-import { genPageMetadata } from 'app/seo'
+import { filterPostsByLocale } from 'app/Post/filterPostsByLocale'
+import { useLocale } from 'locale/state'
 
 const POSTS_PER_PAGE = 5
 
-export const metadata = genPageMetadata({ title: 'Leaves' })
-
 export default function BlogPage() {
   const posts = allCoreContent(sortPosts(allBlogs))
+  const { locale } = useLocale()
+  const localizedPosts = filterPostsByLocale(posts, locale)
   const pageNumber = 1
-  const initialDisplayPosts = posts.slice(
+  const initialDisplayPosts = localizedPosts.slice(
     POSTS_PER_PAGE * (pageNumber - 1),
     POSTS_PER_PAGE * pageNumber
   )
   const pagination = {
     currentPage: pageNumber,
-    totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
+    totalPages: Math.ceil(localizedPosts.length / POSTS_PER_PAGE),
   }
 
   return (
     <ListLayout
-      posts={posts}
+      posts={localizedPosts}
       initialDisplayPosts={initialDisplayPosts}
       pagination={pagination}
       title="All Leaves"

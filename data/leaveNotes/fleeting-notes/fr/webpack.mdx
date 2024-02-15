@@ -1,0 +1,95 @@
+---
+title: Webpack
+date: 2023-01-01
+tags:
+  - webpack
+  - frontend
+---
+
+## Concepts
+
+[Article de base](https://www.valentinog.com/blog/webpack/)
+
+### Point d'entrée :
+
+Le point de départ à partir duquel toutes les dépendances d'un projet frontend sont collectées. `src/index.js`
+
+```js
+// webpack.config.js
+module.exports = {
+  entry: { index: path.resolve(__dirname, 'source', 'index.js') },
+}
+```
+### Sortie
+
+Où les fichiers JavaScript et statiques résultants sont collectés pendant le processus de construction. dist/
+
+```js
+module.exports = {
+  output: {
+    path: path.resolve(__dirname, 'build'),
+  },
+}
+```
+### Chargeurs
+
+Extensions tierces qui aident Webpack à gérer différentes extensions de fichiers.
+L'ordre dans lequel les chargeurs apparaissent dans la configuration est très important
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      }
+    ]
+  } 
+}
+```
+
+### Plugins
+
+Extensions tierces qui peuvent modifier le fonctionnement de webpack.
+
+```js
+module.exports = {
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'index.html'),
+    }),
+  ],
+}
+```
+
+### Mode
+developemnt / production - production applique la minification et d'autres optimisations:
+
+minification avec TerserWebpackPlugin pour réduire la taille du bundle
+hoisting de portée avec ModuleConcatenationPlugin
+Il définit également process.env.NODE_ENV à "production". Cette variable d'environnement est utile pour effectuer des choses conditionnellement en production ou en développement.
+
+### Chargement différé / Découpage de code
+Technique d'optimisation.
+Les développeurs peuvent décider de charger une partie spécifique du code à partir d'une interaction utilisateur comme onClick ou le chargement de page.
+  
+```js
+  module.exports = {
+  optimization: {
+    splitChunks: { chunks: 'all' },
+  },
+}
+```
+
+Les imports dynamiques chargent le code de manière dynamique
+
+```js
+  const getUserModule = () => import('./common/usersAPI')
+
+  btn.addEventListener('click', () => {
+    getUserModule().then(({ getUsers }) => {
+      getUsers().then((json) => console.log(json))
+    })
+  })
+```

@@ -1,0 +1,48 @@
+---
+title: Retourner un Type Sans Mapping
+date: 2023-07-14
+tags: ['typescript']
+summary: "Démontre une stratégie TypeScript pour trier un tableau d'utilisateurs par un nom formaté sans remappage de l'entité ou altération du type utilisateur d'origine, en utilisant les capacités de type avancées pour une manipulation efficace des données."
+---
+
+En TypeScript, gérer les transformations de données tout en préservant l'intégrité du type peut être difficile, surtout lorsqu'il s'agit d'opérations telles que le tri d'un tableau d'objets basé sur une nouvelle propriété. Considérez le cas où nous avons un type Utilisateur et une exigence de trier les utilisateurs par un nom formaté. L'objectif est de réaliser cette opération sans remappage de l'entité ou altération du type d'utilisateur d'origine, en veillant à ce que la fonction puisse retourner le type Utilisateur tout en utilisant internement une version augmentée de ce type pour le tri.
+
+Étant donné un objet utilisateur :
+
+```ts
+type Utilisateur = {
+  id: string;
+  prenom: string;
+  nom: string;
+};
+```
+
+Et une fonction pour formater le nom de l'utilisateur :
+
+
+```ts
+const formaterNomUtilisateur = (utilisateur: Utilisateur) => `${utilisateur.prenom} ${utilisateur.nom}`;
+```
+
+Nous visons à trier les utilisateurs par le nom formaté sans changer le type Utilisateur. Pour ce faire, nous étendons le type Utilisateur dans notre fonction de tri, en ajoutant une propriété formattedName uniquement pour un usage interne. Cette approche nous permet d'utiliser le nom formaté pour le tri tout en conservant le type utilisateur d'origine comme type de retour de la fonction :
+
+```ts
+export function sortUsers<U extends User>(users: U[] | undefined): U[] {
+  return [...(users || [])]
+    .map(user => ({
+      ...user,
+      formattedName: formatUserName(user), // Temporarily augment the type with formattedName
+    }))
+    .sort((a, b) => a.formattedName.localeCompare(b.formattedName))
+    .map(({ formattedName, ...rest }) => rest); // Strip the formattedName before returning
+}
+```
+
+Cette technique tire parti des génériques et des capacités de manipulation de type de TypeScript pour garantir que :
+
+Le type d'entrée est respecté, permettant à la fonction d'accepter un tableau d'Utilisateur ou de toute sous-type de celui-ci.
+Le tri est effectué en fonction d'une propriété calculée dynamiquement (formattedName) sans affecter la structure de données ou le type d'origine.
+Le tableau retourné maintient le type d'origine, U[], sans exposer le formattedName utilisé en interne.
+En imposant le type de retour de la fonction et en manipulant intelligemment les types dans la fonction, nous pouvons trier les utilisateurs par une propriété dérivée de manière efficace et sécurisée, mettant en valeur la puissance et la flexibilité de TypeScript dans la manipulation d'opérations de données complexes.
+
+Cette approche optimise les performances et la sécurité des types, garantissant que la fonction reste polyvalente et réutilisable sans imposer de coûts supplémentaires liés à l'évaluation répétée ou aux modifications de type inutiles.
