@@ -6,9 +6,9 @@ import dateFnsFr from "date-fns/locale/fr"
 import { TranslationContext, fallbackLocale } from "./TranslationProvider"
 import { useContext } from "react";
 
-export const locales = ["de", "en", "fr", "pt"] as const
+export type AppLocale = "de" | "en" | "fr" | "pt"
 
-export type AppLocale = (typeof locales)[number]
+export const locales: AppLocale[] = ["de", "en", "fr", "pt"] as const
 
 export function useLocale() {
   const { locale, setLocale } = useContext(TranslationContext);

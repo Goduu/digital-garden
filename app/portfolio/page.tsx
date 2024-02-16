@@ -1,28 +1,30 @@
 import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 import { genPageMetadata } from 'app/seo'
+import { LocalizedText } from '@/locale/LocalizedText'
 
 export const metadata = genPageMetadata({ title: 'Projects' })
 
 export default function Portfolio() {
+  const translations = { en, fr, de, pt }
+
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Portfolio
+            <LocalizedText translations={translations} translationKey={'portfolio'} />
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Showcase of my projects
+            <LocalizedText translations={translations} translationKey="showcaseOfMyProjects" />
           </p>
         </div>
         <div className="container py-12">
           <div className="-m-4 flex flex-wrap">
             {projectsData.map((d) => (
               <Card
-                key={d.title}
-                title={d.title}
-                description={d.description}
+                key={d.href}
+                translations={d.translations}
                 imgSrc={d.imgSrc}
                 technologies={d.technologies}
                 href={d.href}
@@ -34,4 +36,21 @@ export default function Portfolio() {
       </div>
     </>
   )
+}
+
+const en = {
+  portfolio: 'Portfolio',
+  showcaseOfMyProjects: 'Showcase of my projects',
+}
+const fr: typeof en = {
+  portfolio: 'Portfolio',
+  showcaseOfMyProjects: 'Vitrine de mes projets',
+}
+const de: typeof en = {
+  portfolio: 'Portfolio',
+  showcaseOfMyProjects: 'Showcase meiner Projekte',
+}
+const pt: typeof en = {
+  portfolio: 'Portifólio',
+  showcaseOfMyProjects: 'Showcase dos meus projetos',
 }

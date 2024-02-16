@@ -55,7 +55,7 @@ export const LocaleSwitcher: FC = () => {
         <div className={`z-10 ${!open && "hidden"} absolute bg-white divide-y divide-slate-100 rounded-s-lg shadow dark:bg-slate-700`}>
           <ul className="py-2 text-sm" aria-label="language-button">
             {locales.map((language) => (
-              <li>
+              <li key={language}>
                 <button
                   type="button"
                   aria-label={language}

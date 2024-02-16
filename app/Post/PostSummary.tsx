@@ -1,12 +1,11 @@
 import { LinkArrow } from "@/components/LinkArrow";
 import Tag from "@/components/Tag";
-import siteMetadata from "@/data/siteMetadata";
+import { siteMetadata } from "@/data/siteMetadata";
 import { AuraBeamAnnotator, AuraBeamBody, AuraBeamTitle } from "aura-beam-annotator";
 import Link from "next/link";
 import { formatDate } from "pliny/utils/formatDate";
 import { FC } from "react";
 import { CoreContent, MDXDocumentDate } from "pliny/utils/contentlayer";
-import { AppLocale } from "locale/state";
 
 export type Post = CoreContent<MDXDocumentDate>
 

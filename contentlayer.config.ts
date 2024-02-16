@@ -19,8 +19,9 @@ import rehypeKatex from 'rehype-katex'
 import rehypeCitation from 'rehype-citation'
 import rehypePrismPlus from 'rehype-prism-plus'
 import rehypePresetMinify from 'rehype-preset-minify'
-import siteMetadata from './data/siteMetadata'
-import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
+import { siteMetadata } from './data/siteMetadata'
+import { MDXDocumentDate, allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
+import { AppLocale, locales } from './locale/state'
 
 const root = process.cwd()
 const isProduction = process.env.NODE_ENV === 'production'
@@ -50,15 +51,21 @@ const computedFields: ComputedFields = {
  * Count the occurrences of all tags across leave posts and write to json file
  */
 function createTagCount(allBlogs) {
-  const tagCount: Record<string, number> = {}
+  // for each locale return an empty object
+  const tagCount = locales.reduce((acc, locale) => {
+    acc[locale] = {};
+    return acc;
+  }, {} as Record<AppLocale, Record<string, number>>);
+
   allBlogs.forEach((file) => {
+    const locale = file.locale
     if (file.tags && (!isProduction || file.draft !== true)) {
       file.tags.forEach((tag) => {
         const formattedTag = GithubSlugger.slug(tag)
-        if (formattedTag in tagCount) {
-          tagCount[formattedTag] += 1
+        if (formattedTag in tagCount[locale]) {
+          tagCount[locale][formattedTag] += 1
         } else {
-          tagCount[formattedTag] = 1
+          tagCount[locale][formattedTag] = 1
         }
       })
     }
@@ -71,10 +78,26 @@ function createSearchIndex(allBlogs) {
     siteMetadata?.search?.provider === 'kbar' &&
     siteMetadata.search.kbarConfig.searchDocumentsPath
   ) {
-    writeFileSync(
-      `public/${siteMetadata.search.kbarConfig.searchDocumentsPath}`,
-      JSON.stringify(allCoreContent(sortPosts(allBlogs)))
-    )
+    const allBlogsByLocale = allBlogs.reduce((acc, blog) => {
+      console.log('blog----', blog)
+      if (!acc[blog.locale]) {
+        acc[blog.locale] = []
+      }
+      acc[blog.locale].push(blog)
+      return acc
+    }, {} as Record<AppLocale, MDXDocumentDate[]>)
+
+    for (const [locale, blogs] of Object.entries<MDXDocumentDate[]>(allBlogsByLocale)) {
+      console.log("locale---", locale)
+      writeFileSync(
+        `public/${siteMetadata.search.kbarConfig.searchDocumentsPath}_${locale}.json`,
+        JSON.stringify(allCoreContent(sortPosts(blogs)))
+      )
+    }
+    // writeFileSync(
+    //   `public/${siteMetadata.search.kbarConfig.searchDocumentsPath}`,
+    //   JSON.stringify(allCoreContent(sortPosts(allBlogs)))
+    // )
     console.log('Local search index generated...')
   }
 }
