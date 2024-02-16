@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
 import { FaBuildingColumns } from 'react-icons/fa6'
-import { Achievement } from 'contentlayer/generated'
+import { Achievement } from '@contentlayer/generated'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { Heading } from '../Heading/Heading'
 

@@ -4,7 +4,7 @@ import { SectionHeading } from '../SectionHeading/SectionHeading'
 import { StarRating } from '../StarRating/StarRating'
 import { FaCheck } from 'react-icons/fa6'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
-import { Skill, allSkills } from 'contentlayer/generated'
+import { Skill, allSkills } from '@contentlayer/generated'
 
 const Skills: FC = () => {
   return (

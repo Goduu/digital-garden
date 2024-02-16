@@ -3,7 +3,7 @@ import { FC } from 'react'
 
 import { SectionHeading } from '../SectionHeading/SectionHeading'
 import AchievementItem from './AchievementItem'
-import { allAchievements } from 'contentlayer/generated'
+import { allAchievements } from '@contentlayer/generated'
 
 const sortedAchievements = allAchievements.sort((a, b) => {
   const aOrderNumber = parseInt(a._raw.sourceFileName.replace(/^\D+/g, ''))

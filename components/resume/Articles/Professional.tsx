@@ -2,7 +2,7 @@ import { FaBriefcase } from 'react-icons/fa6'
 import { FC } from 'react'
 import { SectionHeading } from '../SectionHeading/SectionHeading'
 import ProfessionalItem from './ProfessionalItem'
-import { allProfessionalExperiences } from 'contentlayer/generated'
+import { allProfessionalExperiences } from '@contentlayer/generated'
 
 const sortedProfessionalExperiences = allProfessionalExperiences.sort((a, b) => {
   const aOrderNumber = parseInt(a._raw.sourceFileName.replace(/^\D+/g, ''))

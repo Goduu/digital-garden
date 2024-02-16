@@ -1,6 +1,6 @@
 import { FaCalendar } from 'react-icons/fa6'
 import { FC } from 'react'
-import { ProfessionalExperience } from 'contentlayer/generated'
+import { ProfessionalExperience } from '@contentlayer/generated'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { Heading } from '../Heading/Heading'
 

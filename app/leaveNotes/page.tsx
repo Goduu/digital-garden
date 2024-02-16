@@ -1,7 +1,7 @@
 "use client"
 import ListLayout from '@/layouts/ListLayoutWithTags'
 import { allCoreContent, sortPosts, omit } from 'pliny/utils/contentlayer'
-import { allBlogs } from 'contentlayer/generated'
+import { allBlogs } from '@contentlayer/generated'
 import { filterPostsByLocale } from 'app/Post/filterPostsByLocale'
 import { useLocale } from 'locale/state'
 
