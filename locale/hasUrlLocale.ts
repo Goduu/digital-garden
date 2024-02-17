@@ -1,4 +1,4 @@
-import { locales } from "./state"
+import { locales } from "./useLocale"
 
 export const hasUrlLocale = (url: string) => {
     return locales.reduce((acc, locale) => {

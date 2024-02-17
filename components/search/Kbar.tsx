@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation.js'
 import { CoreContent, MDXDocument } from 'pliny/utils/contentlayer'
 import { KBarModal } from './KBarModal'
 import { formatDate } from 'pliny/utils/formatDate'
-import { useLocale } from '@/locale/state'
+import { useLocale } from '@/locale/useLocale'
 
 export interface KBarSearchProps {
     searchDocumentsPath: string | false

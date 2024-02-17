@@ -1,5 +1,5 @@
 "use client"
-import { useLocale } from "@/locale/state";
+import { useLocale } from "@/locale/useLocale";
 import { FC, ReactNode } from "react";
 import { KBarSearchProvider } from "./Kbar";
 

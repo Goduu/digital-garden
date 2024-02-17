@@ -1,7 +1,7 @@
 "use client"
 import siteMetadata from '@/data/siteMetadata'
 import { AuraBeamAnnotator, AuraBeamBody, AuraBeamTitle } from 'aura-beam-annotator'
-import { useTranslation } from 'locale/state'
+import { useTranslation } from '@/locale/useTranslation'
 import React from 'react'
 
 export const SiteSummary = () => {

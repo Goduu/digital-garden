@@ -1,5 +1,5 @@
 import { LocalizedText } from "@/locale/LocalizedText";
-import { useTranslation } from "@/locale/state";
+import { useTranslation } from "@/locale/useTranslation";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FC } from "react";

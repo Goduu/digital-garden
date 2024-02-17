@@ -1,6 +1,7 @@
 "use client"
 import { AuraBeamAnnotator, AuraBeamBody, AuraBeamTitle, AuraBeamVerticalDivider } from 'aura-beam-annotator'
-import { useLocale, useTranslation } from 'locale/state'
+import { useTranslation } from '@/locale/useTranslation'
+import { useLocale } from '@/locale/useLocale'
 import Link from 'next/link'
 import React, { FC } from 'react'
 import { Post, PostSummary } from './PostSummary'

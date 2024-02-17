@@ -1,0 +1,14 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Digital Garden</title>
+      <link>https://digital-garden-chi-seven.vercel.app/leaveNotes</link>
+      <description>A simple web app for growing knowledge</description>
+      <language>en-us</language>
+      <managingEditor>idcangussu+tree@hotmail.com (Igor Cangussu)</managingEditor>
+      <webMaster>idcangussu+tree@hotmail.com (Igor Cangussu)</webMaster>
+      <lastBuildDate>Invalid Date</lastBuildDate>
+      <atom:link href="https://digital-garden-chi-seven.vercel.app/tags/pt/feed.xml" rel="self" type="application/rss+xml"/>
+      
+    </channel>
+  </rss>

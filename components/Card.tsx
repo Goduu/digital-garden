@@ -3,7 +3,7 @@ import { FC } from 'react'
 import Image from './Image'
 import Link from './Link'
 import { Project } from '@/data/projectsData'
-import { useTranslation } from '@/locale/state'
+import { useTranslation } from '@/locale/useTranslation'
 
 export const Card: FC<Project> = ({ translations, imgSrc, technologies, href, npmUrl }) => {
   const PT = useTranslation(translations)

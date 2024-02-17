@@ -1,5 +1,5 @@
 "use client"
-import { useLocale } from "@/locale/state"
+import { useLocale } from "@/locale/useLocale"
 import { formatDate } from "pliny/utils/formatDate"
 import { FC } from "react"
 

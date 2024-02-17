@@ -1,5 +1,4 @@
 import { ReactNode } from 'react'
-import { formatDate } from 'pliny/utils/formatDate'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from '@contentlayer/generated'
 import Comments from '@/components/Comments'
@@ -8,7 +7,7 @@ import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
-import { useLocale } from '@/locale/state'
+import { useLocale } from '@/locale/useLocale'
 import { LocalizedDate } from '@/components/date/LocalizedDate'
 
 interface LayoutProps {

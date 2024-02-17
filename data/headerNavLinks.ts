@@ -1,4 +1,4 @@
-type HeaderNavLinks = {
+export type HeaderNavLinks = {
   href: string
   title: keyof typeof en
 }

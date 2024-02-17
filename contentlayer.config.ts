@@ -21,8 +21,9 @@ import rehypePrismPlus from 'rehype-prism-plus'
 import rehypePresetMinify from 'rehype-preset-minify'
 import siteMetadata from './data/siteMetadata'
 import { MDXDocumentDate, allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
-import { AppLocale, locales } from './locale/state'
 
+type AppLocale = "de" | "en" | "fr" | "pt"
+const locales: AppLocale[] = ["de", "en", "fr", "pt"] as const
 const root = process.cwd()
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -79,7 +80,6 @@ function createSearchIndex(allBlogs) {
     siteMetadata.search.kbarConfig.searchDocumentsPath
   ) {
     const allBlogsByLocale = allBlogs.reduce((acc, blog) => {
-      console.log('blog----', blog)
       if (!acc[blog.locale]) {
         acc[blog.locale] = []
       }
@@ -88,7 +88,6 @@ function createSearchIndex(allBlogs) {
     }, {} as Record<AppLocale, MDXDocumentDate[]>)
 
     for (const [locale, blogs] of Object.entries<MDXDocumentDate[]>(allBlogsByLocale)) {
-      console.log("locale---", locale)
       writeFileSync(
         `public/${siteMetadata.search.kbarConfig.searchDocumentsPath}_${locale}.json`,
         JSON.stringify(allCoreContent(sortPosts(blogs)))

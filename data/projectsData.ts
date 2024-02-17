@@ -1,4 +1,4 @@
-import { AppLocale } from "@/locale/state"
+import { AppLocale } from "@/locale/useLocale"
 
 export type Project = {
   technologies: string[]

@@ -1,6 +1,7 @@
 "use client"
 import { Dispatch, FC, ReactNode, SetStateAction, createContext, useState } from "react"
-import { AppLocale } from "./state"
+import { AppLocale } from "./useLocale"
+import { useLocalStorage } from "utils/useLocalStorage"
 
 export const defaultLocale: AppLocale = "en"
 export const fallbackLocale: AppLocale = "en"
@@ -21,7 +22,7 @@ type TranslationProviderProps = {
 }
 
 export const TranslationProvider: FC<TranslationProviderProps> = ({ children }) => {
-    const [locale, setLocale] = useState<AppLocale>(defaultLocale)
+    const [locale, setLocale] = useLocalStorage("locale")
 
     return (
         <TranslationContext.Provider value={{ locale, setLocale }}>

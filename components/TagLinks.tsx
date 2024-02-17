@@ -1,5 +1,6 @@
 "use client"
-import { AppLocale, useLocale, useTranslation } from "@/locale/state"
+import { useTranslation } from "@/locale/useTranslation"
+import { AppLocale, useLocale } from "@/locale/useLocale"
 import { FC } from "react"
 import Tag from "./Tag"
 import { slug } from 'github-slugger'

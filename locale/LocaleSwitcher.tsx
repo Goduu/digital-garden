@@ -1,7 +1,8 @@
 "use client"
 import { FC, ReactNode, useEffect, useRef, useState } from "react"
-import { AppLocale, locales, useLocale, useTranslation } from "./state"
-import { BR, US, FR, DE, FlagComponent } from 'country-flag-icons/react/3x2'
+import { useTranslation } from "./useTranslation"
+import { AppLocale, locales, useLocale } from "./useLocale"
+import { BR, US, FR, DE } from 'country-flag-icons/react/3x2'
 import { hasUrlLocale } from "./hasUrlLocale"
 import { usePathname } from "next/navigation"
 import { useRouter } from "next/navigation"

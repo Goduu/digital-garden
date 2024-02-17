@@ -1,16 +1,14 @@
-"use client"
 import siteMetadata from '@/data/siteMetadata'
-import { headerNavLinkTranslations, headerNavLinks } from '@/data/headerNavLinks'
+import { headerNavLinks } from '@/data/headerNavLinks'
 import Logo from '@/data/logo.svg'
 import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './search/SearchButton'
 import { LocaleSwitcher } from 'locale/LocaleSwitcher'
-import { useTranslation } from 'locale/state'
+import { HeaderLink } from './HeaderLink'
 
 const Header = () => {
-  const T = useTranslation(headerNavLinkTranslations)
 
   return (
     <header className="flex items-center justify-between py-10">
@@ -34,13 +32,7 @@ const Header = () => {
         {headerNavLinks
           .filter((link) => link.href !== '/')
           .map((link) => (
-            <Link
-              key={link.title}
-              href={link.href}
-              className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
-            >
-              {T[link.title]}
-            </Link>
+            <HeaderLink link={link} />
           )
           )}
         <SearchButton />

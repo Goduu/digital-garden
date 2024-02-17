@@ -3,6 +3,7 @@ import LatestPosts from '../components/Post/LatestPosts'
 import { SiteSummary } from './SiteSummary'
 import { AuraBeam, AuraBeamVerticalDivider } from 'aura-beam-annotator'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
+import { NewsLetter } from '@/components/NewsLetter'
 
 export default function Home({ posts }) {
   return (
@@ -14,7 +15,7 @@ export default function Home({ posts }) {
       </AuraBeam>
       {siteMetadata.newsletter?.provider && (
         <div className="flex items-center justify-center pt-4">
-          <NewsletterForm />
+          <NewsLetter />
         </div>
       )}
     </>

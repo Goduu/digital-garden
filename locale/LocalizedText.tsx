@@ -1,5 +1,6 @@
 "use client"
-import { AppLocale, useTranslation } from "./state"
+import { useTranslation } from "./useTranslation"
+import { AppLocale } from "./useLocale"
 
 type Translations = Record<AppLocale, Record<string, string>>
 

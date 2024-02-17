@@ -6,7 +6,7 @@ import { allBlogs } from '@contentlayer/generated'
 import tagData from 'app/tag-data.json'
 import { genPageMetadata } from 'app/seo'
 import { Metadata } from 'next'
-import { AppLocale } from '@/locale/state'
+import { AppLocale } from '@/locale/useLocale'
 
 export async function generateMetadata({ params }: { params: { tag: string } }): Promise<Metadata> {
   const tag = decodeURI(params.tag)

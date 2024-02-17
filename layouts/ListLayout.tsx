@@ -7,8 +7,7 @@ import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from '@contentlayer/generated'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
-import siteMetadata from '@/data/siteMetadata'
-import { useLocale } from '@/locale/state'
+import { useLocale } from '@/locale/useLocale'
 import { LocalizedDate } from '@/components/date/LocalizedDate'
 
 interface PaginationProps {
