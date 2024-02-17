@@ -7,13 +7,14 @@ import { CoreContent } from 'pliny/utils/contentlayer'
 import { Blog } from '@contentlayer/generated'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
-import { siteMetadata } from '@/data/siteMetadata'
+import siteMetadata from '@/data/siteMetadata'
 import tagData from 'app/tag-data.json'
 import { genPageMetadata } from 'app/seo'
 import { TagLinks } from '@/components/TagLinks'
 import { Pagination, PaginationProps } from '@/components/Pagination'
 import { useLocale, useTranslation } from '@/locale/state'
-import { filterPostsByLocale } from 'app/Post/filterPostsByLocale'
+import { filterPostsByLocale } from '@/components/Post/filterPostsByLocale'
+import { LocalizedDate } from '@/components/date/LocalizedDate'
 
 interface ListLayoutProps {
   posts: CoreContent<Blog>[]
@@ -72,9 +73,7 @@ export default function ListLayoutWithTags({
                     <article className="flex flex-col space-y-2 xl:space-y-0">
                       <dl>
                         <dt className="sr-only">{T.publishedOn}</dt>
-                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                          <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
-                        </dd>
+                        <LocalizedDate date={date} />
                       </dl>
                       <div className="space-y-3">
                         <div>

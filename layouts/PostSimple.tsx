@@ -6,8 +6,10 @@ import Comments from '@/components/Comments'
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
-import { siteMetadata } from '@/data/siteMetadata'
+import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import { useLocale } from '@/locale/state'
+import { LocalizedDate } from '@/components/date/LocalizedDate'
 
 interface LayoutProps {
   content: CoreContent<Blog>
@@ -17,6 +19,7 @@ interface LayoutProps {
 }
 
 export default function PostLayout({ content, next, prev, children }: LayoutProps) {
+  const { locale } = useLocale()
   const { path, slug, date, title } = content
 
   return (
@@ -29,9 +32,7 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
               <dl>
                 <div>
                   <dt className="sr-only">Published on</dt>
-                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                    <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
-                  </dd>
+                  <LocalizedDate date={date} />
                 </div>
               </dl>
               <div>

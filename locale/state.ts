@@ -1,3 +1,4 @@
+"use client"
 import { Locale as DateFnsLocale } from "date-fns"
 import dateFnsDe from "date-fns/locale/de"
 import dateFnsEn from "date-fns/locale/en-GB"

@@ -1,11 +1,12 @@
 import { slug } from 'github-slugger'
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
-import { siteMetadata } from '@/data/siteMetadata'
+import siteMetadata from '@/data/siteMetadata'
 import ListLayout from '@/layouts/ListLayoutWithTags'
 import { allBlogs } from '@contentlayer/generated'
 import tagData from 'app/tag-data.json'
 import { genPageMetadata } from 'app/seo'
 import { Metadata } from 'next'
+import { AppLocale } from '@/locale/state'
 
 export async function generateMetadata({ params }: { params: { tag: string } }): Promise<Metadata> {
   const tag = decodeURI(params.tag)
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: { params: { tag: string } }):
 }
 
 export const generateStaticParams = async () => {
-  const tagCounts = tagData as Record<string, number>
+  const tagCounts = tagData as Record<AppLocale, Record<string, number>>
   const tagKeys = Object.keys(tagCounts)
   const paths = tagKeys.map((tag) => ({
     tag: encodeURI(tag),

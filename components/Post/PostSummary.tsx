@@ -1,13 +1,15 @@
 import { LinkArrow } from "@/components/LinkArrow";
 import Tag from "@/components/Tag";
-import { siteMetadata } from "@/data/siteMetadata";
+import siteMetadata from "@/data/siteMetadata";
 import { AuraBeamAnnotator, AuraBeamBody, AuraBeamTitle } from "aura-beam-annotator";
 import Link from "next/link";
 import { formatDate } from "pliny/utils/formatDate";
 import { FC } from "react";
-import { CoreContent, MDXDocumentDate } from "pliny/utils/contentlayer";
+import { CoreContent } from "pliny/utils/contentlayer";
+import { Blog } from "@contentlayer/generated";
+import { LocalizedDate } from "../date/LocalizedDate";
 
-export type Post = CoreContent<MDXDocumentDate>
+export type Post = CoreContent<Blog>
 
 type PostSummaryProps = {
     post: Post
@@ -27,9 +29,7 @@ export const PostSummary: FC<PostSummaryProps> = ({ post }) => {
             <AuraBeamBody>
                 <article>
                     <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                            <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
-                        </dd>
+                        <LocalizedDate date={date} />
                         <div className="space-y-5 xl:col-span-3">
                             <div className="space-y-6">
                                 <div>

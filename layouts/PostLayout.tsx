@@ -7,8 +7,10 @@ import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import Image from '@/components/Image'
 import Tag from '@/components/Tag'
-import { siteMetadata } from '@/data/siteMetadata'
+import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import { LocalizedDate } from '@/components/date/LocalizedDate'
+import { LocalizedText } from '@/locale/LocalizedText'
 
 const editUrl = (path) => `${siteMetadata.siteRepo}/blob/main/data/${path}`
 const discussUrl = (path) =>
@@ -32,6 +34,7 @@ interface LayoutProps {
 export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
   const { filePath, path, slug, date, title, tags } = content
   const basePath = path.split('/')[0]
+  const translations = { en, de, fr, pt }
 
   return (
     <SectionContainer>
@@ -42,12 +45,8 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
                 <div>
-                  <dt className="sr-only">Published on</dt>
-                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                    <time dateTime={date}>
-                      {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
-                    </time>
-                  </dd>
+                  <dt className="sr-only"><LocalizedText translations={translations} translationKey='publishedOn' /></dt>
+                  <LocalizedDate date={date} />
                 </div>
               </dl>
               <div>
@@ -57,7 +56,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
           </header>
           <div className="grid-rows-[auto_1fr] divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0">
             <dl className="pb-10 pt-6 xl:border-b xl:border-gray-200 xl:pt-11 xl:dark:border-gray-700">
-              <dt className="sr-only">Authors</dt>
+              <dt className="sr-only"><LocalizedText translations={translations} translationKey='author' /></dt>
               <dd>
                 <ul className="flex flex-wrap justify-center gap-4 sm:space-x-12 xl:block xl:space-x-0 xl:space-y-8">
                   {authorDetails.map((author) => (
@@ -72,7 +71,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                         />
                       )}
                       <dl className="whitespace-nowrap text-sm font-medium leading-5">
-                        <dt className="sr-only">Name</dt>
+                        <dt className="sr-only"><LocalizedText translations={translations} translationKey='name' /></dt>
                         <dd className="text-gray-900 dark:text-gray-100">{author.name}</dd>
                         <dt className="sr-only">Twitter</dt>
                         <dd>
@@ -95,10 +94,10 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">{children}</div>
               <div className="pb-6 pt-6 text-sm text-gray-700 dark:text-gray-300">
                 <Link href={discussUrl(path)} rel="nofollow">
-                  Discuss on Twitter
+                  <LocalizedText translations={translations} translationKey='discussOnTwitter' />
                 </Link>
                 {` • `}
-                <Link href={editUrl(filePath)}>View on GitHub</Link>
+                <Link href={editUrl(filePath)}><LocalizedText translations={translations} translationKey='viewOnGitHub' /></Link>
               </div>
               {siteMetadata.comments && (
                 <div
@@ -114,7 +113,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                 {tags && (
                   <div className="py-4 xl:py-8">
                     <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                      Tags
+                      <LocalizedText translations={translations} translationKey='tags' />
                     </h2>
                     <div className="flex flex-wrap">
                       {tags.map((tag) => (
@@ -124,11 +123,11 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                   </div>
                 )}
                 {(next || prev) && (
-                  <div className="flex justify-between py-4 xl:block xl:space-y-8 xl:py-8">
+                  <div className="flex justify-between py-4 xl:block xl:space-x-10 xl:py-8">
                     {prev && prev.path && (
                       <div>
                         <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                          Previous Article
+                          <LocalizedText translations={translations} translationKey='previousArticle' />
                         </h2>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                           <Link href={`/${prev.path}`}>{prev.title}</Link>
@@ -138,7 +137,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                     {next && next.path && (
                       <div>
                         <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                          Next Article
+                          <LocalizedText translations={translations} translationKey='nextArticle' />
                         </h2>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                           <Link href={`/${next.path}`}>{next.title}</Link>
@@ -154,7 +153,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                   className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                   aria-label="Back to the leave notes"
                 >
-                  &larr; Back to the leave notes
+                  &larr; <LocalizedText translations={translations} translationKey='backToTheLeaveNotes' />
                 </Link>
               </div>
             </footer>
@@ -163,4 +162,50 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
       </article>
     </SectionContainer>
   )
+}
+
+const en = {
+  author: 'Author',
+  publishedOn: 'Published on',
+  name: 'Name',
+  discussOnTwitter: 'Discuss on Twitter',
+  viewOnGitHub: 'View on GitHub',
+  tags: 'Tags',
+  previousArticle: 'Previous Article',
+  nextArticle: 'Next Article',
+  backToTheLeaveNotes: 'Back to the leave notes',
+}
+
+const de: typeof en = {
+  author: 'Autor',
+  publishedOn: 'Veröffentlicht am',
+  name: 'Name',
+  discussOnTwitter: 'Auf Twitter diskutieren',
+  viewOnGitHub: 'Auf GitHub ansehen',
+  tags: 'Tags',
+  previousArticle: 'Vorheriger Artikel',
+  nextArticle: 'Nächster Artikel',
+  backToTheLeaveNotes: 'Zurück zu den Notizen',
+}
+const fr: typeof en = {
+  author: 'Auteur',
+  publishedOn: 'Publié le',
+  name: 'Nom',
+  discussOnTwitter: 'Discuter sur Twitter',
+  viewOnGitHub: 'Voir sur GitHub',
+  tags: 'Tags',
+  previousArticle: 'Article précédent',
+  nextArticle: 'Article suivant',
+  backToTheLeaveNotes: 'Retour aux notes',
+}
+const pt: typeof en = {
+  author: 'Autor',
+  publishedOn: 'Publicado em',
+  name: 'Nome',
+  discussOnTwitter: 'Discutir no Twitter',
+  viewOnGitHub: 'Ver no GitHub',
+  tags: 'Tags',
+  previousArticle: 'Artigo anterior',
+  nextArticle: 'Próximo artigo',
+  backToTheLeaveNotes: 'Voltar para as notas',
 }

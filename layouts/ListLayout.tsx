@@ -7,7 +7,9 @@ import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from '@contentlayer/generated'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
-import { siteMetadata } from '@/data/siteMetadata'
+import siteMetadata from '@/data/siteMetadata'
+import { useLocale } from '@/locale/state'
+import { LocalizedDate } from '@/components/date/LocalizedDate'
 
 interface PaginationProps {
   totalPages: number
@@ -22,6 +24,7 @@ interface ListLayoutProps {
 
 function Pagination({ totalPages, currentPage }: PaginationProps) {
   const pathname = usePathname()
+
   const basePath = pathname.split('/')[1]
   const prevPage = currentPage - 1 > 0
   const nextPage = currentPage + 1 <= totalPages
@@ -66,6 +69,7 @@ export default function ListLayout({
   initialDisplayPosts = [],
   pagination,
 }: ListLayoutProps) {
+  const { locale } = useLocale()
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((post) => {
     const searchContent = post.title + post.summary + post.tags?.join(' ')
@@ -119,9 +123,7 @@ export default function ListLayout({
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                   <dl>
                     <dt className="sr-only">Published on</dt>
-                    <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                      <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
-                    </dd>
+                    <LocalizedDate date={date} />
                   </dl>
                   <div className="space-y-3 xl:col-span-3">
                     <div>

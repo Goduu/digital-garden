@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation.js'
 import { CoreContent, MDXDocument } from 'pliny/utils/contentlayer'
 import { KBarModal } from './KBarModal'
 import { formatDate } from 'pliny/utils/formatDate'
+import { useLocale } from '@/locale/state'
 
 export interface KBarSearchProps {
     searchDocumentsPath: string | false
@@ -44,6 +45,7 @@ export const KBarSearchProvider: FC<{
     const { searchDocumentsPath, defaultActions, onSearchDocumentsLoad } = kbarConfig
     const [searchActions, setSearchActions] = useState<Action[]>([])
     const [dataLoaded, setDataLoaded] = useState(false)
+    const { locale } = useLocale()
 
     useEffect(() => {
         const mapPosts = (posts: CoreContent<MDXDocument>[]) => {
@@ -54,7 +56,7 @@ export const KBarSearchProvider: FC<{
                     name: post.title,
                     keywords: post?.summary || '',
                     section: 'Content',
-                    subtitle: formatDate(post.date, 'en-US'),
+                    subtitle: formatDate(post.date, locale),
                     perform: () => router.push('/' + post.path),
                 })
             }

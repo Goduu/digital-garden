@@ -1,5 +1,5 @@
 "use client"
-import { siteMetadata } from '@/data/siteMetadata'
+import siteMetadata from '@/data/siteMetadata'
 import { AuraBeamAnnotator, AuraBeamBody, AuraBeamTitle } from 'aura-beam-annotator'
 import { useTranslation } from 'locale/state'
 import React from 'react'

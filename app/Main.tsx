@@ -1,5 +1,5 @@
-import { siteMetadata } from '@/data/siteMetadata'
-import LatestPosts from './Post/LatestPosts'
+import siteMetadata from '@/data/siteMetadata'
+import LatestPosts from '../components/Post/LatestPosts'
 import { SiteSummary } from './SiteSummary'
 import { AuraBeam, AuraBeamVerticalDivider } from 'aura-beam-annotator'
 import NewsletterForm from 'pliny/ui/NewsletterForm'

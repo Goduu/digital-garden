@@ -1,5 +1,5 @@
 "use client"
-import { siteMetadata } from '@/data/siteMetadata'
+import siteMetadata from '@/data/siteMetadata'
 import { headerNavLinkTranslations, headerNavLinks } from '@/data/headerNavLinks'
 import Logo from '@/data/logo.svg'
 import Link from './Link'
