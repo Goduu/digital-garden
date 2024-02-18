@@ -9,7 +9,6 @@ export default function Home({ posts }) {
     <>
       <AuraBeam>
         <SiteSummary />
-        <AuraBeamVerticalDivider color='teal' direction='l-to-r' />
         <LatestPosts posts={posts} />
       </AuraBeam>
       {siteMetadata.newsletter?.provider && (

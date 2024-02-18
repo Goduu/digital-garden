@@ -19,9 +19,8 @@ const LatestPosts: FC<LatestPostProps> = ({ posts }) => {
     const localizedPosts = filterPostsByLocale(posts, locale)
 
     return (
-        <div>
+        <div className='pt-24'>
             <div >
-                <AuraBeamVerticalDivider color='teal' direction='r-to-l' />
                 <AuraBeamAnnotator color='teal'>
                     <AuraBeamTitle title={T.latestNotes} />
                     <AuraBeamBody>
