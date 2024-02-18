@@ -1,0 +1,29 @@
+---
+title: Promise.all() vs allSettled()
+date: 2024-02-01
+tags: ['REST', 'javascript', 'ascync']
+summary: "Uma visão comparativa de `Promise.all()` e `Promise.allSettled()`, destacando seus casos de uso no manuseio de várias promises em operações assíncronas em JavaScript."
+---
+
+No mundo assíncrono do JavaScript, gerenciar várias promises de forma eficiente é crucial para otimizar o desempenho de aplicações web e a experiência do usuário. Dois métodos importantes para lidar com coleções de promises são `Promise.all()` e `Promise.allSettled()`. Cada um serve a um propósito único no fluxo assíncrono, adaptado a diferentes requisitos e cenários.
+
+### `Promise.all()`
+
+`Promise.all()` é um método usado ao lidar com várias promises simultaneamente. Ele recebe um iterável de promises como entrada e retorna uma única Promise que:
+
+- **Se realiza** quando todas as promises de entrada são cumpridas. Nesse caso, a promise retornada é resolvida com uma array contendo os valores das promises de entrada na mesma ordem.
+- **Rejeita** assim que uma das promises de entrada for rejeitada. A promise retornada é rejeitada com o motivo da primeira promise que foi rejeitada.
+
+**Caso de Uso**: `Promise.all()` é ideal quando todas as operações assíncronas precisam ter sucesso para que o programa prossiga. É comumente usado em cenários em que a falha de qualquer operação única significa que a tarefa coletiva não pode ser concluída ou não faz sentido continuar.
+
+### `Promise.allSettled()`
+
+Introduzido no ES2020, `Promise.allSettled()` difere de `Promise.all()` na forma como lida com a resolução e rejeição das promises de entrada. Ele também recebe um iterável de promises, mas retorna uma promise que:
+
+- **Sempre se realiza** depois que todas as promises de entrada foram resolvidas (seja cumprida ou rejeitada). O valor resolvido é uma array de objetos, cada um descrevendo o resultado de cada promise com um status de "cumprida" ou "rejeitada" e um valor ou motivo correspondente.
+
+**Caso de Uso**: `Promise.allSettled()` é útil quando você precisa realizar várias operações de forma independente e deseja conhecer o resultado de cada uma, independentemente de elas terem sucesso ou falharem. Este método é adequado para cenários onde o sucesso parcial é aceitável, ou você precisa realizar ações de limpeza ou de acompanhamento com base nos resultados individuais.
+
+**Comparação**: Enquanto `Promise.all()` é rigoroso ao exigir que todas as promises se cumpram, `Promise.allSettled()` oferece uma abordagem mais flexível, permitindo que os desenvolvedores lidem coletivamente com sucessos e falhas. A escolha entre os dois depende se a conclusão da sua operação requer que todas as tarefas tenham sucesso ou se pode tolerar algumas falhas.
+
+Compreender as distinções e os casos de uso apropriados para `Promise.all()` e `Promise.allSettled()` permite que os desenvolvedores escrevam código assíncrono mais robusto, eficiente e resiliente, gerenciando adequadamente múltiplas operações simultâneas.

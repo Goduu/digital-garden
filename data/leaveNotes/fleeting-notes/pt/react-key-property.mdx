@@ -1,0 +1,43 @@
+---
+title: Propriedade 'key' em React
+date: 2023-01-01
+tags: ['react']
+summary: Entenda como o uso da propriedade chave pode impactar o comportamento dos componentes no React.
+---
+
+Se dermos a um componente uma propriedade 'key', o React a considera como um perfil diferente se esse componente mudar.
+
+Para evitar essas mudanças de props:
+
+```ts
+export default function ProfilePage({ userId }) {
+  const [comment, setComment] = useState('')
+
+  // 🔴 Evite: Redefinir o estado quando uma propriedade muda em um efeito
+
+  useEffect(() => {
+    setComment('')
+  }, [userId])
+}
+```
+
+Podemos usar o atributo 'key'.
+
+```ts
+export default function ProfilePage({ userId }) {
+
+return (
+<Profile
+	userId={userId}
+	key={userId}
+/>
+);
+}
+
+function Profile({ userId }) {
+// ✅ This and any other state below will reset on key change automatically
+const [comment, setComment] = useState('');
+}
+```
+
+Fonte: https://react.dev/learn/you-might-not-need-an-effect#resetting-all-state-when-a-prop-changes

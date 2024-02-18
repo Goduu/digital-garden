@@ -1,0 +1,22 @@
+---
+title: Zwei Zustände nach Abruf aktualisieren
+date: 2023-01-01
+tags: ['react', 'async']
+summary: Erkunden von Methoden zur effizienten Aktualisierung mehrerer React-Zustände nach einer Abrufoperation, einschließlich der Verwendung von unstable_batchedUpdates() in React 16/17 und der automatischen Behandlung in React 18.
+---
+
+Wenn wir etwas abrufen und 2 React-Zustände aktualisieren müssen, wie sollten wir vorgehen?
+
+- React 16/17 hat eine unstable_batchedUpdates()-Funktion, um Zustände in Batches zu aktualisieren
+
+```ts
+import { unstable_batchedUpdates } from 'react-dom'
+
+unstable_batchedUpdates(() => {
+  setName('Moustafa')
+  setAge(25)
+})
+```
+
+- React 18 macht das automatisch.
+- Eine andere Alternative wäre die Erstellung eines einzelnen Zustands mit allen Props, die sich ändern würden.

@@ -1,0 +1,27 @@
+---
+title: Ts Erzwingen eines Typs oder eines anderen
+date: 2023-01-01
+tags: ['typescript']
+summary: Der Artikel erläutert, wie man in TypeScript einen bestimmten Typ oder einen anderen erzwingen kann. Es wird erklärt, dass wir durch die Verwendung von bedingten Typen bestimmte Eigenschaften in einem Typ obligatorisch machen können, aber nicht in einem anderen.
+---
+
+Indem wir einen Typ | einen anderen machen, erzwingen wir, dass diese oder jene Eigenschaft in einem Typ obligatorisch sein sollte, aber nicht in einem anderen.
+
+```ts
+export type FormConfirmationProps<V extends FormValues> = {
+  requireConfirmation: true
+  onConfirm: OnConfirmForm<V>
+  onSubmit?: never
+}
+
+export type FormNoConfirmationProps<V extends FormValues> = {
+  requireConfirmation?: never
+  onConfirm?: never
+  onSubmit: OnSubmitForm<V>
+}
+
+export type FormProviderProps<V extends FormValues> = {
+  ...
+} & (FormConfirmationProps<V> | FormNoConfirmationProps<V>)
+
+```

@@ -1,0 +1,22 @@
+---
+title: Atualizar dois estados após a busca
+date: 2023-01-01
+tags: ['react', 'async']
+summary: Explorando métodos para atualizar eficientemente múltiplos estados do React após uma operação de busca, incluindo o uso de unstable_batchedUpdates() no React 16/17 e o tratamento automático no React 18.
+---
+
+Quando precisamos buscar algo e atualizar 2 estados do React, como devemos proceder?
+
+- O React 16/17 possui uma função `unstable_batchedUpdates()` para atualizar estados em lote
+
+```ts
+import { unstable_batchedUpdates } from 'react-dom'
+
+unstable_batchedUpdates(() => {
+  setName('Moustafa')
+  setAge(25)
+})
+```
+
+- O React 18 faz isso automaticamente.
+- Outra alternativa seria criar um único estado com todas as props que mudariam.

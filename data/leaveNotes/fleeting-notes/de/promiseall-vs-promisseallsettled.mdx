@@ -1,0 +1,29 @@
+---
+title: Promise.all() vs allSettled()
+date: 2024-02-01
+tags: ['REST', 'javascript', 'ascync']
+summary: "Ein vergleichender Überblick von `Promise.all()` und `Promise.allSettled()`, wobei ihre Anwendungsfälle beim Umgang mit mehreren Promises in JavaScript-Asynchronoperationen hervorgehoben werden."
+---
+
+In der asynchronen Welt von JavaScript ist es entscheidend, mehrere Promises effizient zu verwalten, um die Leistung von Webanwendungen und die Benutzererfahrung zu optimieren. Zwei wichtige Methoden zum Umgang mit Sammlungen von Promises sind `Promise.all()` und `Promise.allSettled()`. Jede erfüllt einen einzigartigen Zweck im asynchronen Ablauf, der auf unterschiedlichen Anforderungen und Szenarien basiert.
+
+### `Promise.all()`
+
+`Promise.all()` ist eine Methode, die verwendet wird, wenn Sie gleichzeitig mit mehreren Promises arbeiten. Sie nimmt ein iterierbares Objekt von Promises als Eingabe und gibt eine einzelne Promise zurück, die:
+
+- **Erfüllt** wird, wenn alle Eingabe-Promises erfüllt sind. In diesem Fall wird die zurückgegebene Promise mit einem Array gelöst, das die Werte der Eingabe-Promises in der gleichen Reihenfolge enthält.
+- **Abgelehnt** wird, sobald eine der Eingabe-Promises abgelehnt wird. Die zurückgegebene Promise wird mit dem Grund der ersten abgelehnten Promise abgelehnt.
+
+**Anwendungsfall**: `Promise.all()` ist ideal, wenn alle asynchronen Operationen erfolgreich sein müssen, damit das Programm fortgesetzt werden kann. Es wird häufig in Szenarien verwendet, in denen das Scheitern einer einzelnen Operation bedeutet, dass die kollektive Aufgabe nicht abgeschlossen werden kann oder es keinen Sinn macht, fortzufahren.
+
+### `Promise.allSettled()`
+
+In ES2020 eingeführt, unterscheidet sich `Promise.allSettled()` von `Promise.all()` darin, wie es mit der Erfüllung und Ablehnung von Eingabe-Promises umgeht. Es nimmt ebenfalls ein iterierbares Objekt von Promises entgegen, gibt jedoch eine Promise zurück, die:
+
+- **Immer erfüllt** wird, nachdem alle Eingabe-Promises abgeschlossen wurden (entweder erfüllt oder abgelehnt). Der gelöste Wert ist ein Array von Objekten, die jeweils das Ergebnis jeder Promise mit einem Status von entweder "erfüllt" oder "abgelehnt" und einem entsprechenden Wert oder Grund beschreiben.
+
+**Anwendungsfall**: `Promise.allSettled()` ist nützlich, wenn Sie mehrere Operationen unabhängig voneinander ausführen müssen und das Ergebnis jeder einzelnen kennen möchten, unabhängig davon, ob sie erfolgreich sind oder nicht. Diese Methode eignet sich für Szenarien, in denen ein teilweiser Erfolg akzeptabel ist oder Sie Bereinigungs- oder Folgeaktionen basierend auf einzelnen Ergebnissen durchführen müssen.
+
+Vergleich: Während Promise.all() strikt darauf besteht, dass alle Versprechen erfüllt werden, bietet Promise.allSettled() einen flexibleren Ansatz und ermöglicht es Entwicklern, sowohl Erfolge als auch Misserfolge gemeinsam zu behandeln. Die Wahl zwischen den beiden hängt davon ab, ob der Abschluss Ihrer Operation erfordert, dass alle Aufgaben erfolgreich sind oder ob einige Fehler toleriert werden können.können.
+
+Das Verständnis der Unterschiede und geeigneten Anwendungsfälle für `Promise.all()` und `Promise.allSettled()` ermöglicht es Entwicklern, einen robusteren, effizienteren und widerstandsfähigeren as

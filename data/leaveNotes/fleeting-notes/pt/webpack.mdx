@@ -1,0 +1,101 @@
+---
+title: Webpack
+date: 2023-01-01
+tags:
+  - webpack
+  - frontend
+---
+
+## Conceitos
+
+[Artigo base](https://www.valentinog.com/blog/webpack/)
+
+### Ponto de entrada:
+
+O ponto de partida a partir do qual todas as dependências de um projeto frontend são coletadas. `src/index.js`
+
+```js
+// webpack.config.js
+module.exports = {
+  entry: { index: path.resolve(__dirname, 'source', 'index.js') },
+}
+```
+
+### Saída
+
+Onde os arquivos JavaScript resultantes e os arquivos estáticos são coletados durante o processo de construção. `dist/`
+
+```js
+module.exports = {
+  output: {
+    path: path.resolve(__dirname, 'build'),
+  },
+}
+```
+
+### Loaders
+
+Extensões de terceiros que ajudam o Webpack a lidar com várias extensões de arquivo.
+A ordem em que os loaders aparecem na configuração é de grande importância.
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      }
+    ]
+  },
+}
+```
+
+### Plugins
+
+Extensões de terceiros que podem alterar o funcionamento do webpack
+
+```js
+module.exports = {
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'index.html'),
+    }),
+  ],
+}
+```
+
+### Modo
+
+`developemnt` / `production` - production aplica minificação e outras otimizações:
+
+- minificação com TerserWebpackPlugin para reduzir o tamanho do pacote
+- hoisting de escopo com ModuleConcatenationPlugin
+  Também define `process.env.NODE_ENV` como "production". Essa variável de ambiente é útil para fazer coisas condicionalmente em produção ou desenvolvimento.
+
+### Lazy loading / Code splitting
+
+Técnica de otimização.
+Os desenvolvedores podem decidir carregar uma parte específica do código a partir de uma interação do usuário, como onClick ou carregamento da página.
+
+```js
+module.exports = {
+  optimization: {
+    splitChunks: { chunks: 'all' },
+  },
+}
+```
+
+As importações dinâmicas carregam o código de forma dinâmica
+
+```js
+const getUserModule = () => import('./common/usersAPI')
+```
+
+```js
+btn.addEventListener('click', () => {
+  getUserModule().then(({ getUsers }) => {
+    getUsers().then((json) => console.log(json))
+  })
+})
+```

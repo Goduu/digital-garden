@@ -1,0 +1,22 @@
+---
+title: Mettre à jour deux états après une requête
+date: 2023-01-01
+tags: ['react', 'async']
+summary: Exploration des méthodes pour mettre à jour efficacement plusieurs états React après une opération de recherche, notamment en utilisant unstable_batchedUpdates() dans React 16/17 et la gestion automatique dans React 18.
+---
+
+Quand nous devons récupérer quelque chose et mettre à jour 2 états React, comment devrions-nous procéder ?
+
+React 16/17 possède une fonction `unstable_batchedUpdates()` pour mettre à jour les états par lot
+
+```ts
+import { unstable_batchedUpdates } from 'react-dom'
+
+unstable_batchedUpdates(() => {
+  setName('Moustafa')
+  setAge(25)
+})
+```
+
+- React 18 le fait automatiquement.
+- Une autre alternative serait de créer un seul état contenant toutes les props qui changeraient.

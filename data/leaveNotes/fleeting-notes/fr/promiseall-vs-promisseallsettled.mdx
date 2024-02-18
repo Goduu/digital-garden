@@ -1,0 +1,29 @@
+---
+title: "`Promise.all()` vs `Promise.allSettled()`"
+date: 2024-02-01
+tags: ['REST', 'javascript', 'ascync']
+summary: "Une vue comparative de `Promise.all()` et `Promise.allSettled()`, mettant en évidence leurs cas d'utilisation dans la gestion de multiples promesses dans les opérations asynchrones JavaScript."
+---
+
+Dans le monde asynchrone de JavaScript, gérer efficacement plusieurs promesses est crucial pour optimiser les performances des applications web et l'expérience utilisateur. Deux méthodes importantes pour traiter les collections de promesses sont `Promise.all()` et `Promise.allSettled()`. Chacune répond à un besoin unique dans le flux asynchrone, adapté à différents scénarios et exigences.
+
+### `Promise.all()`
+
+`Promise.all()` est une méthode utilisée lors du travail avec plusieurs promesses de manière concurrente. Elle prend un itérable de promesses en entrée et renvoie une seule promesse qui :
+
+- **S'accomplit** lorsque toutes les promesses en entrée sont accomplies. Dans ce cas, la promesse renvoyée est résolue avec un tableau contenant les valeurs des promesses en entrée dans le même ordre.
+- **Est rejetée** dès qu'une des promesses en entrée est rejetée. La promesse renvoyée est rejetée avec la raison de la première promesse qui est rejetée.
+
+**Cas d'utilisation** : `Promise.all()` est idéale lorsque toutes les opérations asynchrones doivent réussir pour que le programme puisse continuer. Elle est couramment utilisée dans des scénarios où l'échec de n'importe quelle opération individuelle signifie que la tâche collective ne peut pas être complétée ou qu'il n'est pas logique de continuer.
+
+### `Promise.allSettled()`
+
+Introduite dans ES2020, `Promise.allSettled()` diffère de `Promise.all()` dans la manière dont elle gère la résolution et le rejet des promesses en entrée. Elle prend également un itérable de promesses mais renvoie une promesse qui :
+
+- **S'accomplit toujours** après que toutes les promesses en entrée ont été résolues (ou rejetées). La valeur résolue est un tableau d'objets, décrivant chacun le résultat de chaque promesse avec un statut de "accompli" ou "rejeté" et une valeur ou une raison correspondante.
+
+**Cas d'utilisation** : `Promise.allSettled()` est utile lorsque vous avez besoin d'effectuer plusieurs opérations de manière indépendante et souhaitez connaître le résultat de chacune, qu'elles réussissent ou échouent. Cette méthode convient aux scénarios où un succès partiel est acceptable, ou lorsque vous avez besoin d'effectuer des opérations de nettoyage ou de suivi en fonction des résultats individuels.
+
+**Comparaison** : Alors que `Promise.all()` est strict en exigeant que toutes les promesses soient accomplies, `Promise.allSettled()` offre une approche plus flexible, permettant aux développeurs de gérer à la fois les succès et les échecs de manière collective. Le choix entre les deux dépend de savoir si l'achèvement de votre opération nécessite que toutes les tâches réussissent ou si certaines défaillances peuvent être tolérées.
+
+Comprendre les distinctions et les cas d'utilisation appropriés de `Promise.all()` et `Promise.allSettled()` permet aux développeurs d'écrire un code asynchrone plus robuste, efficace et résilient, en gérant habilement plusieurs opérations concurrentes.

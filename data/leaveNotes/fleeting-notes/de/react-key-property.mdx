@@ -1,0 +1,43 @@
+---
+title: "'key' attribute in React"
+date: 2023-01-01
+tags: ['react']
+summary: Erfahren Sie, wie sich die Verwendung des Schlüsselattributs auf das Verhalten von Komponenten in React auswirken kann.
+---
+
+Wenn wir einem Komponenten ein Schlüsselattribut (key) geben, betrachtet React sie als ein anderes Profil, wenn sich diese Komponente ändert.
+
+Um diese Änderungen der Props zu vermeiden:
+
+```ts
+export default function ProfilePage({ userId }) {
+  const [comment, setComment] = useState('')
+
+  // 🔴 Vermeiden: Zurücksetzen des Zustands bei Änderung einer Prop im Effekt
+
+  useEffect(() => {
+    setComment('')
+  }, [userId])
+}
+```
+
+Wir könnten das Schlüsselattribut verwenden.
+
+```ts
+export default function ProfilePage({ userId }) {
+
+return (
+<Profile
+	userId={userId}
+	key={userId}
+/>
+);
+}
+
+function Profile({ userId }) {
+// ✅ Dies und jeder andere Zustand unten wird automatisch bei Änderung des Schlüssels zurückgesetzt
+const [comment, setComment] = useState('');
+}
+```
+
+Quelle: https://react.dev/learn/you-might-not-need-an-effect#resetting-all-state-when-a-prop-changes
