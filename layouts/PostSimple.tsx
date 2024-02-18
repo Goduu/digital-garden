@@ -8,7 +8,7 @@ import SectionContainer from '@/components/SectionContainer'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import { useLocale } from '@/locale/useLocale'
-import { LocalizedDate } from '@/components/date/LocalizedDate'
+import { LocalizedDate } from '@/locale/LocalizedDate'
 
 interface LayoutProps {
   content: CoreContent<Blog>

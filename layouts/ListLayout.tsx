@@ -8,7 +8,7 @@ import type { Blog } from '@contentlayer/generated'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import { useLocale } from '@/locale/useLocale'
-import { LocalizedDate } from '@/components/date/LocalizedDate'
+import { LocalizedDate } from '@/locale/LocalizedDate'
 
 interface PaginationProps {
   totalPages: number

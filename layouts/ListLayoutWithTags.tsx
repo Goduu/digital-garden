@@ -13,7 +13,7 @@ import { Pagination, PaginationProps } from '@/components/Pagination'
 import { useTranslation } from '@/locale/useTranslation'
 import { useLocale } from '@/locale/useLocale'
 import { filterPostsByLocale } from '@/components/Post/filterPostsByLocale'
-import { LocalizedDate } from '@/components/date/LocalizedDate'
+import { LocalizedDate } from '@/locale/LocalizedDate'
 
 interface ListLayoutProps {
   posts: CoreContent<Blog>[]

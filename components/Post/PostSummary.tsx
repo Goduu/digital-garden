@@ -1,13 +1,11 @@
-import { LinkArrow } from "@/components/LinkArrow";
 import Tag from "@/components/Tag";
-import siteMetadata from "@/data/siteMetadata";
 import { AuraBeamAnnotator, AuraBeamBody, AuraBeamTitle } from "aura-beam-annotator";
 import Link from "next/link";
-import { formatDate } from "pliny/utils/formatDate";
 import { FC } from "react";
 import { CoreContent } from "pliny/utils/contentlayer";
 import { Blog } from "@contentlayer/generated";
-import { LocalizedDate } from "../date/LocalizedDate";
+import { LocalizedDate } from "@/locale/LocalizedDate";
+import { LocalizedText } from "@/locale/LocalizedText";
 
 export type Post = CoreContent<Blog>
 
@@ -44,7 +42,15 @@ export const PostSummary: FC<PostSummaryProps> = ({ post }) => {
                                 </div>
                             </div>
                             <div className="text-base font-medium leading-6">
-                                <LinkArrow href={`/leaveNotes/${slug}`} text="Read more" />
+                                <Link
+                                    href={`/leaveNotes/${slug}`}
+                                    className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                                    aria-label="Read more"
+                                >
+                                    <LocalizedText translations={{ en, de, fr, pt }} translationKey="readMore" />
+                                    &rarr;
+                                </Link>
+
                             </div>
                         </div>
                     </div>
@@ -52,4 +58,17 @@ export const PostSummary: FC<PostSummaryProps> = ({ post }) => {
             </AuraBeamBody>
         </AuraBeamAnnotator>
     )
+}
+
+const en = {
+    readMore: "Read more"
+}
+const de: typeof en = {
+    readMore: "Weiterlesen"
+}
+const fr: typeof en = {
+    readMore: "Lire la suite"
+}
+const pt: typeof en = {
+    readMore: "Leia mais"
 }

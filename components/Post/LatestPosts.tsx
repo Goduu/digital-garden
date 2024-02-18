@@ -54,7 +54,6 @@ const en = {
     latestNotes: 'Latest Notes',
     latestNotesBody: 'The latest notes I\'ve written. I hope you can get something out of them!',
     noPosts: 'No posts found.',
-    readMore: 'Read more',
     allPosts: 'All Posts'
 }
 
@@ -62,7 +61,6 @@ const de = {
     latestNotes: 'Neueste Notizen',
     latestNotesBody: 'Die neuesten Notizen, die ich geschrieben habe. Ich hoffe, Sie können etwas daraus ziehen!',
     noPosts: 'Keine Beiträge gefunden.',
-    readMore: 'Weiterlesen',
     allPosts: 'Alle Beiträge'
 }
 
@@ -70,7 +68,6 @@ const fr = {
     latestNotes: 'Dernières notes',
     latestNotesBody: 'Les dernières notes que j\'ai écrites. J\'espère que vous pourrez en tirer quelque chose!',
     noPosts: 'Aucun article trouvé.',
-    readMore: 'Lire la suite',
     allPosts: 'Tous les articles'
 }
 
@@ -78,6 +75,5 @@ const pt = {
     latestNotes: 'Notas mais recentes',
     latestNotesBody: 'As notas mais recentes que escrevi. Espero que você possa tirar algo delas!',
     noPosts: 'Nenhum post encontrado.',
-    readMore: 'Leia mais',
     allPosts: 'Todos os posts'
 }

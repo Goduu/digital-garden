@@ -9,7 +9,7 @@ import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
-import { LocalizedDate } from '@/components/date/LocalizedDate'
+import { LocalizedDate } from '@/locale/LocalizedDate'
 import { LocalizedText } from '@/locale/LocalizedText'
 
 const editUrl = (path) => `${siteMetadata.siteRepo}/blob/main/data/${path}`
