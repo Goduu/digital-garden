@@ -37,7 +37,9 @@ const Header = () => {
           )}
         <SearchButton />
         <ThemeSwitch />
-        <LocaleSwitcher />
+        <div className='hidden md:block'>
+          <LocaleSwitcher />
+        </div>
         <MobileNav />
       </div>
     </header>

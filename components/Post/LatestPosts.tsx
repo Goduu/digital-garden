@@ -21,7 +21,7 @@ const LatestPosts: FC<LatestPostProps> = ({ posts }) => {
     return (
         <div className='pt-24'>
             <div >
-                <AuraBeamAnnotator color='teal'>
+                <AuraBeamAnnotator color='pink'>
                     <AuraBeamTitle title={T.latestNotes} />
                     <AuraBeamBody>
                         {T.latestNotesBody}

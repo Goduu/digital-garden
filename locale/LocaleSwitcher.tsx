@@ -45,7 +45,7 @@ export const LocaleSwitcher: FC = () => {
 
   return (
     <div className="max-w-sm mx-auto" ref={componentRef}>
-      <div className="flex">
+      <div className="flex relative">
         <button
           id="states-button"
           onClick={() => setOpen(!open)}
@@ -53,7 +53,7 @@ export const LocaleSwitcher: FC = () => {
           {languageFlags[locale]}
           {locale}
         </button>
-        <div className={`z-10 ${!open && "hidden"} absolute bg-white divide-y divide-slate-100 rounded-s-lg shadow dark:bg-slate-700`}>
+        <div className={`z-10 ${!open && "hidden"} absolute bg-white divide-y divide-slate-100 rounded-s-lg shadow dark:bg-slate-700 bottom-full sm:top-full`}>
           <ul className="py-2 text-sm" aria-label="language-button">
             {locales.map((language) => (
               <li key={language}>

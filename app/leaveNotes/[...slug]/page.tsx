@@ -12,6 +12,8 @@ import PostBanner from '@/layouts/PostBanner'
 import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
+import { findLocaleInUrl } from '@/locale/findLocaleInUrl'
+import { filterPostsByLocale } from '@/components/Post/filterPostsByLocale'
 
 const defaultLayout = 'PostLayout'
 const layouts = {
@@ -89,9 +91,11 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
     return notFound()
   }
 
-  const prev = sortedCoreContents[postIndex + 1]
-  const next = sortedCoreContents[postIndex - 1]
-  const post = allBlogs.find((p) => p.slug === slug) as Blog
+  const locale = findLocaleInUrl(slug)
+  const localizedBlogs = filterPostsByLocale(allBlogs, locale)
+  const prev = localizedBlogs[postIndex + 1]
+  const next = localizedBlogs[postIndex - 1]
+  const post = localizedBlogs.find((p) => p.slug === slug) as Blog
   const authorList = post?.authors || ['default']
   const authorDetails = authorList.map((author) => {
     const authorResults = allAuthors.find((p) => p.slug === author)

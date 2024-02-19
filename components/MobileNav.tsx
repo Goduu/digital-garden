@@ -2,10 +2,13 @@
 
 import { useState } from 'react'
 import Link from './Link'
-import { headerNavLinks } from '@/data/headerNavLinks'
+import { headerNavLinkTranslations, headerNavLinks } from '@/data/headerNavLinks'
+import { useTranslation } from '@/locale/useTranslation'
+import { LocaleSwitcher } from '@/locale/LocaleSwitcher'
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
+  const T = useTranslation(headerNavLinkTranslations)
 
   const onToggleNav = () => {
     setNavShow((status) => {
@@ -63,10 +66,13 @@ const MobileNav = () => {
                 className="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
                 onClick={onToggleNav}
               >
-                {link.title}
+                {T[link.title]}
               </Link>
             </div>
           ))}
+          <div className='px-12 py-4 fixed bottom-5 left-0 w-full'>
+            <LocaleSwitcher />
+          </div>
         </nav>
       </div>
     </>
