@@ -8,7 +8,6 @@ import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import Skills from '@/components/resume/Articles/Skills'
 import { useLocale } from '@/locale/useLocale'
 import { useTranslation } from '@/locale/useTranslation'
-import PDFDownloadButton from '@/components/resume/PDF/PDFDownloadButton'
 
 
 export const AuthorLayout: FC = () => {
