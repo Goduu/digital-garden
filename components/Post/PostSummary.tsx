@@ -14,6 +14,7 @@ type PostSummaryProps = {
 }
 export const PostSummary: FC<PostSummaryProps> = ({ post }) => {
     const { slug, date, title, summary, tags } = post
+
     return (
         <AuraBeamAnnotator color='pink'>
             <AuraBeamTitle title={

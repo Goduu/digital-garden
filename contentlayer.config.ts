@@ -151,12 +151,18 @@ export const Authors = defineDocumentType(() => ({
     github: { type: 'string' },
     layout: { type: 'string' },
   },
-  computedFields,
+  computedFields: {
+    ...computedFields,
+    locale: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath.split("/")[1],
+    },
+  }
 }))
 
 export const Skill = defineDocumentType(() => ({
   name: 'Skill',
-  filePathPattern: 'resumee/skills/*.mdx',
+  filePathPattern: 'resumee/**/skills/*.mdx',
   contentType: 'mdx',
   fields: {
     title: {
@@ -164,12 +170,23 @@ export const Skill = defineDocumentType(() => ({
       description: 'A name for the category of skills',
       required: true,
     },
+    rating: {
+      type: 'number',
+      description: 'Starts of the skill',
+      required: true,
+    },
   },
+  computedFields: {
+    locale: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath.split("/")[1],
+    },
+  }
 }))
 
 export const ProfessionalExperience = defineDocumentType(() => ({
   name: 'ProfessionalExperience',
-  filePathPattern: 'resumee/professionalExperiences/*.mdx',
+  filePathPattern: 'resumee/**/professionalExperiences/*.mdx',
   contentType: 'mdx',
   fields: {
     title: {
@@ -205,11 +222,17 @@ export const ProfessionalExperience = defineDocumentType(() => ({
       required: false,
     },
   },
+  computedFields: {
+    locale: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath.split("/")[1],
+    },
+  }
 }))
 
 export const Achievement = defineDocumentType(() => ({
   name: 'Achievement',
-  filePathPattern: 'resumee/achievements/*.mdx',
+  filePathPattern: 'resumee/**/achievements/*.mdx',
   contentType: 'mdx',
   fields: {
     achievement: {
@@ -229,13 +252,18 @@ export const Achievement = defineDocumentType(() => ({
       required: true,
     },
   },
+  computedFields: {
+    locale: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath.split("/")[1],
+    },
+  }
 }))
 
 export const AdditionalInfo = defineDocumentType(() => ({
   name: 'AdditionalInfo',
-  filePathPattern: 'resumee/additionalInfo.mdx',
+  filePathPattern: 'resumee/**/additionalInfo.mdx',
   contentType: 'mdx',
-  isSingleton: true,
   fields: {
     title: {
       type: 'string',
@@ -243,11 +271,17 @@ export const AdditionalInfo = defineDocumentType(() => ({
       required: true,
     },
   },
+  computedFields: {
+    locale: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath.split("/")[1],
+    },
+  }
 }))
 
 export const PrivateField = defineDocumentType(() => ({
   name: 'PrivateField',
-  filePathPattern: 'resumee/privateFields/*.mdx',
+  filePathPattern: 'resumee/**/privateFields/*.mdx',
   contentType: 'mdx',
   fields: {
     label: {
