@@ -11,6 +11,16 @@
       <atom:link href="https://digital-garden-chi-seven.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/fr/understand-and-know-all</guid>
+    <title>Compreension et Pardon</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/fr/understand-and-know-all</link>
+    <description>Réflexion sur la phrase &quot;Tout comprendre, c&#39;est tout pardonner&quot; et l&#39;importance du pardon même sans compréhension complète.---</description>
+    <pubDate>Thu, 15 Feb 2024 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>philosophy</category>
+  </item>
+
+  <item>
     <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/understand-and-know-all</guid>
     <title>Verstehen und Vergeben</title>
     <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/understand-and-know-all</link>
@@ -21,10 +31,10 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/fr/understand-and-know-all</guid>
-    <title>Compreension et Pardon</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/fr/understand-and-know-all</link>
-    <description>Réflexion sur la phrase &quot;Tout comprendre, c&#39;est tout pardonner&quot; et l&#39;importance du pardon même sans compréhension complète.---</description>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/en/understand-and-know-all</guid>
+    <title>Understanding and Forgiveness</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/en/understand-and-know-all</link>
+    <description>Reflecting on the phrase &quot;To understand all is to forgive all&quot; and the importance of forgiveness even without full understanding.</description>
     <pubDate>Thu, 15 Feb 2024 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
     <category>philosophy</category>
@@ -41,26 +51,6 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/en/understand-and-know-all</guid>
-    <title>Understanding and Forgiveness</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/en/understand-and-know-all</link>
-    <description>Reflecting on the phrase &quot;To understand all is to forgive all&quot; and the importance of forgiveness even without full understanding.</description>
-    <pubDate>Thu, 15 Feb 2024 00:00:00 GMT</pubDate>
-    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>philosophy</category>
-  </item>
-
-  <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/promiseall-vs-promisseallsettled</guid>
-    <title>Promise.all() vs allSettled()</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/promiseall-vs-promisseallsettled</link>
-    <description>Ein vergleichender Überblick von `Promise.all()` und `Promise.allSettled()`, wobei ihre Anwendungsfälle beim Umgang mit mehreren Promises in JavaScript-Asynchronoperationen hervorgehoben werden.</description>
-    <pubDate>Thu, 01 Feb 2024 00:00:00 GMT</pubDate>
-    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>REST</category><category>javascript</category><category>ascync</category>
-  </item>
-
-  <item>
     <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/fr/promiseall-vs-promisseallsettled</guid>
     <title>`Promise.all()` vs `Promise.allSettled()`</title>
     <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/fr/promiseall-vs-promisseallsettled</link>
@@ -71,10 +61,10 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/promiseall-vs-promisseallsettled</guid>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/promiseall-vs-promisseallsettled</guid>
     <title>Promise.all() vs allSettled()</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/promiseall-vs-promisseallsettled</link>
-    <description>Uma visão comparativa de `Promise.all()` e `Promise.allSettled()`, destacando seus casos de uso no manuseio de várias promises em operações assíncronas em JavaScript.</description>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/promiseall-vs-promisseallsettled</link>
+    <description>Ein vergleichender Überblick von `Promise.all()` und `Promise.allSettled()`, wobei ihre Anwendungsfälle beim Umgang mit mehreren Promises in JavaScript-Asynchronoperationen hervorgehoben werden.</description>
     <pubDate>Thu, 01 Feb 2024 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
     <category>REST</category><category>javascript</category><category>ascync</category>
@@ -91,13 +81,13 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-life-cycle</guid>
-    <title>React Lifecycle Hooks</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-life-cycle</link>
-    <description>Ein prägnanter Leitfaden für den Übergang von React-Klassenkomponenten-Lebenszyklusmethoden zu äquivalenten funktionalen Komponenten-Hooks, mit Schwerpunkt auf den Initialisierungs-, Update- und Aufräumphasen.</description>
-    <pubDate>Mon, 22 Jan 2024 00:00:00 GMT</pubDate>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/promiseall-vs-promisseallsettled</guid>
+    <title>Promise.all() vs allSettled()</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/promiseall-vs-promisseallsettled</link>
+    <description>Uma visão comparativa de `Promise.all()` e `Promise.allSettled()`, destacando seus casos de uso no manuseio de várias promises em operações assíncronas em JavaScript.</description>
+    <pubDate>Thu, 01 Feb 2024 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>react</category>
+    <category>REST</category><category>javascript</category><category>ascync</category>
   </item>
 
   <item>
@@ -111,10 +101,10 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-life-cycle</guid>
-    <title>Hooks de Ciclo de Vida do React</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-life-cycle</link>
-    <description>Um guia conciso para a transição dos métodos de ciclo de vida de componentes de classe do React para hooks de componentes funcionais equivalentes, focando nas fases de inicialização, atualização e limpeza.</description>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-life-cycle</guid>
+    <title>React Lifecycle Hooks</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-life-cycle</link>
+    <description>Ein prägnanter Leitfaden für den Übergang von React-Klassenkomponenten-Lebenszyklusmethoden zu äquivalenten funktionalen Komponenten-Hooks, mit Schwerpunkt auf den Initialisierungs-, Update- und Aufräumphasen.</description>
     <pubDate>Mon, 22 Jan 2024 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
     <category>react</category>
@@ -131,11 +121,11 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-optimization</guid>
-    <title>Optimierung</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-optimization</link>
-    <description>Ein Überblick über das Profiler-Tag von React zur Leistungsoptimierung, das Einblicke in die Rendierungszeiten von Komponenten bietet und hilft, Engpässe zu identifizieren.</description>
-    <pubDate>Mon, 08 Jan 2024 00:00:00 GMT</pubDate>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-life-cycle</guid>
+    <title>Hooks de Ciclo de Vida do React</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-life-cycle</link>
+    <description>Um guia conciso para a transição dos métodos de ciclo de vida de componentes de classe do React para hooks de componentes funcionais equivalentes, focando nas fases de inicialização, atualização e limpeza.</description>
+    <pubDate>Mon, 22 Jan 2024 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
     <category>react</category>
   </item>
@@ -151,10 +141,10 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-optimization</guid>
-    <title>Otimização</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-optimization</link>
-    <description>Uma visão geral da tag Profiler do React para otimização de desempenho, fornecendo insights sobre os tempos de renderização de componentes e ajudando a identificar gargalos.</description>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-optimization</guid>
+    <title>Optimierung</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-optimization</link>
+    <description>Ein Überblick über das Profiler-Tag von React zur Leistungsoptimierung, das Einblicke in die Rendierungszeiten von Komponenten bietet und hilft, Engpässe zu identifizieren.</description>
     <pubDate>Mon, 08 Jan 2024 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
     <category>react</category>
@@ -171,6 +161,16 @@
   </item>
 
   <item>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-optimization</guid>
+    <title>Otimização</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-optimization</link>
+    <description>Uma visão geral da tag Profiler do React para otimização de desempenho, fornecendo insights sobre os tempos de renderização de componentes e ajudando a identificar gargalos.</description>
+    <pubDate>Mon, 08 Jan 2024 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>react</category>
+  </item>
+
+  <item>
     <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/en/https</guid>
     <title>HTTPS</title>
     <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/en/https</link>
@@ -178,16 +178,6 @@
     <pubDate>Sat, 23 Dec 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
     <category>cybersecurity</category>
-  </item>
-
-  <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/risk</guid>
-    <title>Risiko</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/risk</link>
-    <description>Erkundung des nuancierten Verständnisses von Risiko bei Investitionen, wie es von Carl Richards formuliert wurde: das Unerwartete, das nach umfassender Planung bleibt.</description>
-    <pubDate>Sat, 04 Nov 2023 00:00:00 GMT</pubDate>
-    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>investment</category>
   </item>
 
   <item>
@@ -201,10 +191,10 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/risk</guid>
-    <title>Risco</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/risk</link>
-    <description>Explorando o entendimento sutil do risco em investimentos conforme articulado por Carl Richards: o imprevisto que permanece após um planejamento exaustivo.</description>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/risk</guid>
+    <title>Risiko</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/risk</link>
+    <description>Erkundung des nuancierten Verständnisses von Risiko bei Investitionen, wie es von Carl Richards formuliert wurde: das Unerwartete, das nach umfassender Planung bleibt.</description>
     <pubDate>Sat, 04 Nov 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
     <category>investment</category>
@@ -215,6 +205,16 @@
     <title>Risk</title>
     <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/en/risk</link>
     <description>Exploring the nuanced understanding of risk in investment as articulated by Carl Richards: the unforeseen that remains after exhaustive planning.</description>
+    <pubDate>Sat, 04 Nov 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>investment</category>
+  </item>
+
+  <item>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/risk</guid>
+    <title>Risco</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/risk</link>
+    <description>Explorando o entendimento sutil do risco em investimentos conforme articulado por Carl Richards: o imprevisto que permanece após um planejamento exaustivo.</description>
     <pubDate>Sat, 04 Nov 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
     <category>investment</category>
@@ -241,16 +241,6 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/how-we-see-things</guid>
-    <title>Wie wir Dinge sehen</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/how-we-see-things</link>
-    <description>Ein kleiner Einblick, dass unsere Wahrnehmung der Realität mehr von unseren inneren Zuständen und Vorurteilen geprägt ist als von der objektiven Natur der Dinge.</description>
-    <pubDate>Fri, 20 Oct 2023 00:00:00 GMT</pubDate>
-    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>philosophie</category>
-  </item>
-
-  <item>
     <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/fr/how-we-see-things</guid>
     <title>Comment nous voyons les choses</title>
     <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/fr/how-we-see-things</link>
@@ -261,13 +251,13 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/how-we-see-things</guid>
-    <title>Como Vemos as Coisas</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/how-we-see-things</link>
-    <description>Uma pequena reflexão de que nossa percepção da realidade é moldada mais por nossos estados internos e viéses do que pela natureza objetiva das coisas.</description>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/how-we-see-things</guid>
+    <title>Wie wir Dinge sehen</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/how-we-see-things</link>
+    <description>Ein kleiner Einblick, dass unsere Wahrnehmung der Realität mehr von unseren inneren Zuständen und Vorurteilen geprägt ist als von der objektiven Natur der Dinge.</description>
     <pubDate>Fri, 20 Oct 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>filosofia</category>
+    <category>philosophie</category>
   </item>
 
   <item>
@@ -281,6 +271,16 @@
   </item>
 
   <item>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/how-we-see-things</guid>
+    <title>Como Vemos as Coisas</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/how-we-see-things</link>
+    <description>Uma pequena reflexão de que nossa percepção da realidade é moldada mais por nossos estados internos e viéses do que pela natureza objetiva das coisas.</description>
+    <pubDate>Fri, 20 Oct 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>filosofia</category>
+  </item>
+
+  <item>
     <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/en/e2e-ttl</guid>
     <title>E2E Time to Live</title>
     <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/en/e2e-ttl</link>
@@ -288,16 +288,6 @@
     <pubDate>Wed, 20 Sep 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
     <category>test</category><category>e2e</category>
-  </item>
-
-  <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/long-letter</guid>
-    <title>Langer Brief Zitat von Mark Twain</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/long-letter</link>
-    <description>Das Zitat von Mark Twain, &quot;Entschuldigung, dass ich einen langen Brief geschrieben habe, ich hatte keine Zeit, einen kurzen zu schreiben&quot;, betont die Herausforderung der Kürze. Die Vereinfachung von Inhalten auf das Wesentliche erfordert tiefes Verständnis und Anstrengung und unterstreicht den Wert präziser Kommunikation.</description>
-    <pubDate>Thu, 07 Sep 2023 00:00:00 GMT</pubDate>
-    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>Philosophie</category>
   </item>
 
   <item>
@@ -311,6 +301,26 @@
   </item>
 
   <item>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/long-letter</guid>
+    <title>Langer Brief Zitat von Mark Twain</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/long-letter</link>
+    <description>Das Zitat von Mark Twain, &quot;Entschuldigung, dass ich einen langen Brief geschrieben habe, ich hatte keine Zeit, einen kurzen zu schreiben&quot;, betont die Herausforderung der Kürze. Die Vereinfachung von Inhalten auf das Wesentliche erfordert tiefes Verständnis und Anstrengung und unterstreicht den Wert präziser Kommunikation.</description>
+    <pubDate>Thu, 07 Sep 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>Philosophie</category>
+  </item>
+
+  <item>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/en/long-letter</guid>
+    <title>Long Letter Quote by Mark Twain</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/en/long-letter</link>
+    <description>Mark Twain&#39;s quote, &quot;Sorry I wrote a long letter, I didn&#39;t have time to write a short one,&quot; highlights the challenge of brevity. Simplifying content to its essence requires deep understanding and effort, underlining the value of concise communication.</description>
+    <pubDate>Thu, 07 Sep 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>philosophy</category>
+  </item>
+
+  <item>
     <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/long-letter</guid>
     <title>Citação de Carta Longa por Mark Twain</title>
     <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/long-letter</link>
@@ -321,11 +331,11 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/en/long-letter</guid>
-    <title>Long Letter Quote by Mark Twain</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/en/long-letter</link>
-    <description>Mark Twain&#39;s quote, &quot;Sorry I wrote a long letter, I didn&#39;t have time to write a short one,&quot; highlights the challenge of brevity. Simplifying content to its essence requires deep understanding and effort, underlining the value of concise communication.</description>
-    <pubDate>Thu, 07 Sep 2023 00:00:00 GMT</pubDate>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/fr/the-sense-of-life</guid>
+    <title>L&#39;essence de la vie</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/fr/the-sense-of-life</link>
+    <description>Une réflexion sur l&#39;idée que l&#39;essence de la vie ne se trouve pas mais se crée en attribuant un sens à chaque moment.</description>
+    <pubDate>Thu, 24 Aug 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
     <category>philosophy</category>
   </item>
@@ -341,10 +351,10 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/fr/the-sense-of-life</guid>
-    <title>L&#39;essence de la vie</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/fr/the-sense-of-life</link>
-    <description>Une réflexion sur l&#39;idée que l&#39;essence de la vie ne se trouve pas mais se crée en attribuant un sens à chaque moment.</description>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/en/the-sense-of-life</guid>
+    <title>The Sense of Life</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/en/the-sense-of-life</link>
+    <description>A reflection on the idea that the essence of life is not to be found but to be created by assigning meaning to every moment.</description>
     <pubDate>Thu, 24 Aug 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
     <category>philosophy</category>
@@ -358,36 +368,6 @@
     <pubDate>Thu, 24 Aug 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
     <category>filosofia</category>
-  </item>
-
-  <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/en/the-sense-of-life</guid>
-    <title>The Sense of Life</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/en/the-sense-of-life</link>
-    <description>A reflection on the idea that the essence of life is not to be found but to be created by assigning meaning to every moment.</description>
-    <pubDate>Thu, 24 Aug 2023 00:00:00 GMT</pubDate>
-    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>philosophy</category>
-  </item>
-
-  <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/happiness-perception</guid>
-    <title>Wahrnehmung von Glück</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/happiness-perception</link>
-    <description>In diesem Text wird das Konzept des Glücks als kontinuierliche Reise untersucht. Es wird die philosophische Vorstellung hinterfragt, dass Glück ununterbrochen sein muss, um gültig zu sein, und uns dazu herausfordert, darüber nachzudenken, wie wir Zufriedenheit wahrnehmen.</description>
-    <pubDate>Wed, 23 Aug 2023 00:00:00 GMT</pubDate>
-    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>Philosophie</category><category>Glück</category>
-  </item>
-
-  <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/love-by-spinoza</guid>
-    <title>Liebe nach Spinoza</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/love-by-spinoza</link>
-    <description>Spinoza definiert Liebe als &quot;Freude begleitet von der Vorstellung ihrer Ursache&quot;, was zur Reflexion über das antreibt, was Leidenschaft in Projekten vorantreibt. Die Identifizierung der Wurzel der Freude bei der Arbeit kann zu erfüllenderen Unternehmungen führen, die mit Spinozas philosophischer Sicht auf Liebe und ihre Ursachen übereinstimmen.</description>
-    <pubDate>Wed, 23 Aug 2023 00:00:00 GMT</pubDate>
-    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>Philosophie</category><category>Liebe</category>
   </item>
 
   <item>
@@ -411,23 +391,23 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/happiness-perception</guid>
-    <title>Percepção da Felicidade</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/happiness-perception</link>
-    <description>Explorando o conceito de felicidade como uma jornada contínua, este texto examina a noção filosófica de que a felicidade deve ser ininterrupta para ser válida, desafiando-nos a repensar como percebemos a satisfação.</description>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/happiness-perception</guid>
+    <title>Wahrnehmung von Glück</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/happiness-perception</link>
+    <description>In diesem Text wird das Konzept des Glücks als kontinuierliche Reise untersucht. Es wird die philosophische Vorstellung hinterfragt, dass Glück ununterbrochen sein muss, um gültig zu sein, und uns dazu herausfordert, darüber nachzudenken, wie wir Zufriedenheit wahrnehmen.</description>
     <pubDate>Wed, 23 Aug 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>filosofia</category><category>felicidade</category>
+    <category>Philosophie</category><category>Glück</category>
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/love-by-spinoza</guid>
-    <title>Amor segundo Spinoza</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/love-by-spinoza</link>
-    <description>Spinoza define o amor como &quot;alegria acompanhada da ideia de sua causa&quot;, levando à reflexão sobre o que impulsiona a paixão em projetos. Identificar a raiz da alegria no trabalho pode levar a empreendimentos mais gratificantes, alinhando-se com a visão filosófica de Spinoza sobre o amor e suas causas.</description>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/love-by-spinoza</guid>
+    <title>Liebe nach Spinoza</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/love-by-spinoza</link>
+    <description>Spinoza definiert Liebe als &quot;Freude begleitet von der Vorstellung ihrer Ursache&quot;, was zur Reflexion über das antreibt, was Leidenschaft in Projekten vorantreibt. Die Identifizierung der Wurzel der Freude bei der Arbeit kann zu erfüllenderen Unternehmungen führen, die mit Spinozas philosophischer Sicht auf Liebe und ihre Ursachen übereinstimmen.</description>
     <pubDate>Wed, 23 Aug 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>filosofia</category><category>amor</category>
+    <category>Philosophie</category><category>Liebe</category>
   </item>
 
   <item>
@@ -451,13 +431,23 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/is-high-quality-software-worth-the-cost</guid>
-    <title>Ist hochwertige Software den Preis wert?</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/is-high-quality-software-worth-the-cost</link>
-    <description>Hochwertige Software bietet langfristige Vorteile wie geringere Wartungskosten, verbesserte Kundenzufriedenheit und Wettbewerbsvorteile, obwohl sie für Kunden nicht sofort sichtbar ist. Diese Vorteile rechtfertigen die anfängliche Investition und unterstreichen den Wert der Priorisierung interner Qualität in der Softwareentwicklung.</description>
-    <pubDate>Tue, 15 Aug 2023 00:00:00 GMT</pubDate>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/happiness-perception</guid>
+    <title>Percepção da Felicidade</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/happiness-perception</link>
+    <description>Explorando o conceito de felicidade como uma jornada contínua, este texto examina a noção filosófica de que a felicidade deve ser ininterrupta para ser válida, desafiando-nos a repensar como percebemos a satisfação.</description>
+    <pubDate>Wed, 23 Aug 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>qualität</category>
+    <category>filosofia</category><category>felicidade</category>
+  </item>
+
+  <item>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/love-by-spinoza</guid>
+    <title>Amor segundo Spinoza</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/love-by-spinoza</link>
+    <description>Spinoza define o amor como &quot;alegria acompanhada da ideia de sua causa&quot;, levando à reflexão sobre o que impulsiona a paixão em projetos. Identificar a raiz da alegria no trabalho pode levar a empreendimentos mais gratificantes, alinhando-se com a visão filosófica de Spinoza sobre o amor e suas causas.</description>
+    <pubDate>Wed, 23 Aug 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>filosofia</category><category>amor</category>
   </item>
 
   <item>
@@ -471,6 +461,16 @@
   </item>
 
   <item>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/is-high-quality-software-worth-the-cost</guid>
+    <title>Ist hochwertige Software den Preis wert?</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/is-high-quality-software-worth-the-cost</link>
+    <description>Hochwertige Software bietet langfristige Vorteile wie geringere Wartungskosten, verbesserte Kundenzufriedenheit und Wettbewerbsvorteile, obwohl sie für Kunden nicht sofort sichtbar ist. Diese Vorteile rechtfertigen die anfängliche Investition und unterstreichen den Wert der Priorisierung interner Qualität in der Softwareentwicklung.</description>
+    <pubDate>Tue, 15 Aug 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>qualität</category>
+  </item>
+
+  <item>
     <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/en/is-high-quality-software-worth-the-cost</guid>
     <title>Is High-Quality Software Worth the Cost?</title>
     <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/en/is-high-quality-software-worth-the-cost</link>
@@ -478,16 +478,6 @@
     <pubDate>Tue, 15 Aug 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
     <category>quality</category>
-  </item>
-
-  <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/return-a-type-without-mapping</guid>
-    <title>Typ ohne Zuordnung zurückgeben</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/return-a-type-without-mapping</link>
-    <description>Demonstrates a TypeScript strategy for sorting an array of users by a formatted name without remapping the entity or altering the original user type, utilizing advanced type capabilities for efficient data handling.</description>
-    <pubDate>Fri, 14 Jul 2023 00:00:00 GMT</pubDate>
-    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>typescript</category>
   </item>
 
   <item>
@@ -501,10 +491,10 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/return-a-type-without-mapping</guid>
-    <title>Retornar um Tipo Sem Mapping</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/return-a-type-without-mapping</link>
-    <description>Demonstra uma estratégia TypeScript para ordenar uma matriz de usuários por um nome formatado sem remapear a entidade ou alterar o tipo de usuário original, utilizando capacidades avançadas de tipo para manipulação eficiente de dados.</description>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/return-a-type-without-mapping</guid>
+    <title>Typ ohne Zuordnung zurückgeben</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/return-a-type-without-mapping</link>
+    <description>Demonstrates a TypeScript strategy for sorting an array of users by a formatted name without remapping the entity or altering the original user type, utilizing advanced type capabilities for efficient data handling.</description>
     <pubDate>Fri, 14 Jul 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
     <category>typescript</category>
@@ -541,13 +531,13 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-memoization</guid>
-    <title>Memoisierung</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-memoization</link>
-    <description>Das Verständnis von Reacts Memoisierungsansatz mit memo(), useMemo und useCallback sowie Richtlinien für deren optimale Verwendung zur Verbesserung der Leistung durch Vermeidung unnötiger Neu-Renderings.</description>
-    <pubDate>Sat, 14 Jan 2023 00:00:00 GMT</pubDate>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/return-a-type-without-mapping</guid>
+    <title>Retornar um Tipo Sem Mapping</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/return-a-type-without-mapping</link>
+    <description>Demonstra uma estratégia TypeScript para ordenar uma matriz de usuários por um nome formatado sem remapear a entidade ou alterar o tipo de usuário original, utilizando capacidades avançadas de tipo para manipulação eficiente de dados.</description>
+    <pubDate>Fri, 14 Jul 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>react</category><category>memoization</category>
+    <category>typescript</category>
   </item>
 
   <item>
@@ -561,10 +551,10 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-memoization</guid>
-    <title>Memoização</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-memoization</link>
-    <description>Compreendendo a abordagem de memoização do React com memo(), useMemo e useCallback, e diretrizes sobre seu uso ideal para aprimorar o desempenho evitando renderizações desnecessárias.</description>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-memoization</guid>
+    <title>Memoisierung</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-memoization</link>
+    <description>Das Verständnis von Reacts Memoisierungsansatz mit memo(), useMemo und useCallback sowie Richtlinien für deren optimale Verwendung zur Verbesserung der Leistung durch Vermeidung unnötiger Neu-Renderings.</description>
     <pubDate>Sat, 14 Jan 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
     <category>react</category><category>memoization</category>
@@ -581,43 +571,13 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-batch-update</guid>
-    <title>Zwei Zustände nach Abruf aktualisieren</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-batch-update</link>
-    <description>Erkunden von Methoden zur effizienten Aktualisierung mehrerer React-Zustände nach einer Abrufoperation, einschließlich der Verwendung von unstable_batchedUpdates() in React 16/17 und der automatischen Behandlung in React 18.</description>
-    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-memoization</guid>
+    <title>Memoização</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-memoization</link>
+    <description>Compreendendo a abordagem de memoização do React com memo(), useMemo e useCallback, e diretrizes sobre seu uso ideal para aprimorar o desempenho evitando renderizações desnecessárias.</description>
+    <pubDate>Sat, 14 Jan 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>react</category><category>async</category>
-  </item>
-
-  <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-key-property</guid>
-    <title>&#39;key&#39; attribute in React</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-key-property</link>
-    <description>Erfahren Sie, wie sich die Verwendung des Schlüsselattributs auf das Verhalten von Komponenten in React auswirken kann.</description>
-    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
-    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>react</category>
-  </item>
-
-  <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/test-bundle-time</guid>
-    <title>Test bundle time</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/test-bundle-time</link>
-    undefined
-    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
-    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>build</category><category>bash</category>
-  </item>
-
-  <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/ts-enforcing-a-type-or-another</guid>
-    <title>Ts Erzwingen eines Typs oder eines anderen</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/ts-enforcing-a-type-or-another</link>
-    <description>Der Artikel erläutert, wie man in TypeScript einen bestimmten Typ oder einen anderen erzwingen kann. Es wird erklärt, dass wir durch die Verwendung von bedingten Typen bestimmte Eigenschaften in einem Typ obligatorisch machen können, aber nicht in einem anderen.</description>
-    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
-    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>typescript</category>
+    <category>react</category><category>memoization</category>
   </item>
 
   <item>
@@ -671,29 +631,29 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-batch-update</guid>
-    <title>Atualizar dois estados após a busca</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-batch-update</link>
-    <description>Explorando métodos para atualizar eficientemente múltiplos estados do React após uma operação de busca, incluindo o uso de unstable_batchedUpdates() no React 16/17 e o tratamento automático no React 18.</description>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-batch-update</guid>
+    <title>Zwei Zustände nach Abruf aktualisieren</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-batch-update</link>
+    <description>Erkunden von Methoden zur effizienten Aktualisierung mehrerer React-Zustände nach einer Abrufoperation, einschließlich der Verwendung von unstable_batchedUpdates() in React 16/17 und der automatischen Behandlung in React 18.</description>
     <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
     <category>react</category><category>async</category>
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-key-property</guid>
-    <title>Propriedade &#39;key&#39; em React</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-key-property</link>
-    <description>Entenda como o uso da propriedade chave pode impactar o comportamento dos componentes no React.</description>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-key-property</guid>
+    <title>&#39;key&#39; attribute in React</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/react-key-property</link>
+    <description>Erfahren Sie, wie sich die Verwendung des Schlüsselattributs auf das Verhalten von Komponenten in React auswirken kann.</description>
     <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
     <category>react</category>
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/test-bundle-time</guid>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/test-bundle-time</guid>
     <title>Test bundle time</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/test-bundle-time</link>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/test-bundle-time</link>
     undefined
     <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
@@ -701,23 +661,13 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/ts-enforcing-a-type-or-another</guid>
-    <title>Ts forçando um tipo ou outro</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/ts-enforcing-a-type-or-another</link>
-    <description>O artigo discute como forçar um tipo específico ou outro no TypeScript. Ele explica que, usando tipos condicionais, podemos tornar certas propriedades obrigatórias em um tipo, mas não em outro.</description>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/ts-enforcing-a-type-or-another</guid>
+    <title>Ts Erzwingen eines Typs oder eines anderen</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/ts-enforcing-a-type-or-another</link>
+    <description>Der Artikel erläutert, wie man in TypeScript einen bestimmten Typ oder einen anderen erzwingen kann. Es wird erklärt, dass wir durch die Verwendung von bedingten Typen bestimmte Eigenschaften in einem Typ obligatorisch machen können, aber nicht in einem anderen.</description>
     <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
     <category>typescript</category>
-  </item>
-
-  <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/webpack</guid>
-    <title>Webpack</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/webpack</link>
-    undefined
-    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
-    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>webpack</category><category>frontend</category>
   </item>
 
   <item>
@@ -841,13 +791,53 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/five-superpowers-in-investments</guid>
-    <title>5 Superkräfte in Investitionen</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/five-superpowers-in-investments</link>
-    <description>Entdecke die fünf entscheidenden Superkräfte in Investitionen: den Umgang mit FOMO, das Verständnis deines Investitionsspiels, die Annahme eines langfristigen Horizonts, das Unterscheiden von Geduld und Sturheit sowie das Annehmen von Unbehagen für den Erfolg.</description>
-    <pubDate>Sun, 21 Aug 2016 00:00:00 GMT</pubDate>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-batch-update</guid>
+    <title>Atualizar dois estados após a busca</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-batch-update</link>
+    <description>Explorando métodos para atualizar eficientemente múltiplos estados do React após uma operação de busca, incluindo o uso de unstable_batchedUpdates() no React 16/17 e o tratamento automático no React 18.</description>
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>Investition</category>
+    <category>react</category><category>async</category>
+  </item>
+
+  <item>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-key-property</guid>
+    <title>Propriedade &#39;key&#39; em React</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/react-key-property</link>
+    <description>Entenda como o uso da propriedade chave pode impactar o comportamento dos componentes no React.</description>
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>react</category>
+  </item>
+
+  <item>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/test-bundle-time</guid>
+    <title>Test bundle time</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/test-bundle-time</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>build</category><category>bash</category>
+  </item>
+
+  <item>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/ts-enforcing-a-type-or-another</guid>
+    <title>Ts forçando um tipo ou outro</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/ts-enforcing-a-type-or-another</link>
+    <description>O artigo discute como forçar um tipo específico ou outro no TypeScript. Ele explica que, usando tipos condicionais, podemos tornar certas propriedades obrigatórias em um tipo, mas não em outro.</description>
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>typescript</category>
+  </item>
+
+  <item>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/webpack</guid>
+    <title>Webpack</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/webpack</link>
+    undefined
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>webpack</category><category>frontend</category>
   </item>
 
   <item>
@@ -861,13 +851,13 @@
   </item>
 
   <item>
-    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/five-superpowers-in-investments</guid>
-    <title>5 superpoderes nos investimentos</title>
-    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/five-superpowers-in-investments</link>
-    <description>Revelando os cinco superpoderes críticos nos investimentos: gerenciar o FOMO, entender o seu jogo de investimento, adotar um horizonte de longo prazo, distinguir paciência de teimosia e abraçar o desconforto para o sucesso.</description>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/five-superpowers-in-investments</guid>
+    <title>5 Superkräfte in Investitionen</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/de/five-superpowers-in-investments</link>
+    <description>Entdecke die fünf entscheidenden Superkräfte in Investitionen: den Umgang mit FOMO, das Verständnis deines Investitionsspiels, die Annahme eines langfristigen Horizonts, das Unterscheiden von Geduld und Sturheit sowie das Annehmen von Unbehagen für den Erfolg.</description>
     <pubDate>Sun, 21 Aug 2016 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
-    <category>investimento</category>
+    <category>Investition</category>
   </item>
 
   <item>
@@ -878,6 +868,16 @@
     <pubDate>Sun, 21 Aug 2016 00:00:00 GMT</pubDate>
     <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
     <category>investment</category>
+  </item>
+
+  <item>
+    <guid>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/five-superpowers-in-investments</guid>
+    <title>5 superpoderes nos investimentos</title>
+    <link>https://digital-garden-chi-seven.vercel.app/leaveNotes/fleeting-notes/pt/five-superpowers-in-investments</link>
+    <description>Revelando os cinco superpoderes críticos nos investimentos: gerenciar o FOMO, entender o seu jogo de investimento, adotar um horizonte de longo prazo, distinguir paciência de teimosia e abraçar o desconforto para o sucesso.</description>
+    <pubDate>Sun, 21 Aug 2016 00:00:00 GMT</pubDate>
+    <author>idcangussu+tree@hotmail.com (Igor Cangussu)</author>
+    <category>investimento</category>
   </item>
 
     </channel>
