@@ -39,18 +39,18 @@ export default function Portfolio() {
 }
 
 const en = {
-  portfolio: 'Projects',
+  portfolio: 'Portfolio',
   showcaseOfMyProjects: 'Showcase of my projects',
 }
 const fr: typeof en = {
-  portfolio: 'Projets',
+  portfolio: 'Portfolio',
   showcaseOfMyProjects: 'Vitrine de mes projets',
 }
 const de: typeof en = {
-  portfolio: 'Projekten',
+  portfolio: 'Portfolio',
   showcaseOfMyProjects: 'Showcase meiner Projekte',
 }
 const pt: typeof en = {
-  portfolio: 'Projetos',
+  portfolio: 'Portifólio',
   showcaseOfMyProjects: 'Showcase dos meus projetos',
 }
