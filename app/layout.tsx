@@ -12,6 +12,7 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import { TranslationProvider } from 'locale/TranslationProvider'
 import { SearchProviderLocalized } from '@/components/search/SearchProviderLocalized'
+import { Analytics as VercelAnalytics } from "@vercel/analytics/react"
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -84,7 +85,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className="flex h-screen flex-col justify-between font-sans">
                 <SearchProviderLocalized>
                   <Header />
-                  <main className="mb-auto">{children}</main>
+                  <main className="mb-auto">
+                    {children}
+                    <VercelAnalytics />
+                  </main>
                 </SearchProviderLocalized>
                 <Footer />
               </div>
