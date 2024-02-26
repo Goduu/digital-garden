@@ -19,7 +19,7 @@ import rehypeKatex from 'rehype-katex'
 import rehypeCitation from 'rehype-citation'
 import rehypePrismPlus from 'rehype-prism-plus'
 import rehypePresetMinify from 'rehype-preset-minify'
-import siteMetadata from './data/siteMetadata'
+import siteMetadata from './src/data/siteMetadata'
 import { MDXDocumentDate, allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
 
 type AppLocale = "de" | "en" | "fr" | "pt"
@@ -71,7 +71,7 @@ function createTagCount(allBlogs) {
       })
     }
   })
-  writeFileSync('./app/tag-data.json', JSON.stringify(tagCount))
+  writeFileSync('./src/app/tag-data.json', JSON.stringify(tagCount))
 }
 
 function createSearchIndex(allBlogs) {
@@ -293,7 +293,7 @@ export const PrivateField = defineDocumentType(() => ({
 }))
 
 export default makeSource({
-  contentDirPath: 'data',
+  contentDirPath: 'src/data',
   documentTypes: [
     Blog,
     Authors,
