@@ -10,31 +10,8 @@ export type Project = {
 
 const projectsData: Project[] = [
   {
-    imgSrc: '/static/images/trattoria.png',
-    technologies: ['Next.js', 'Tailwind CSS', 'TypeScript'],
-    href: 'https://trattoria-goduu.vercel.app/',
-    translations: {
-      en: {
-        title: 'Trattoria Goduu',
-        description: `A simple restaurant menu.`,
-      },
-      de: {
-        title: 'Trattoria Goduu',
-        description: `Ein einfaches Restaurantmenü.`,
-      },
-      fr: {
-        title: 'Trattoria Goduu',
-        description: `Un simple menu de restaurant.`,
-      },
-      pt: {
-        title: 'Trattoria Goduu',
-        description: `Um menu de restaurante simples.`,
-      },
-    }
-  },
-  {
     imgSrc: '/static/images/evolutionary-algorithm.jpg',
-    technologies: ['Next.js', 'Tailwind CSS', 'TypeScript', 'Python', 'FastAPI', 'WebSocket'],
+    technologies: ['Next.js', 'Tailwind CSS', 'TypeScript', 'Python', 'FastAPI', 'WebSocket', "Mobile"],
     href: 'https://evolutionary-algorithm.vercel.app/',
     translations: {
       en: {
@@ -79,6 +56,30 @@ const projectsData: Project[] = [
       }
     }
   },
+  {
+    imgSrc: '/static/images/trattoria.png',
+    technologies: ['Next.js', 'Tailwind CSS', 'TypeScript'],
+    href: 'https://trattoria-goduu.vercel.app/',
+    translations: {
+      en: {
+        title: 'Trattoria Goduu',
+        description: `A simple restaurant menu.`,
+      },
+      de: {
+        title: 'Trattoria Goduu',
+        description: `Ein einfaches Restaurantmenü.`,
+      },
+      fr: {
+        title: 'Trattoria Goduu',
+        description: `Un simple menu de restaurant.`,
+      },
+      pt: {
+        title: 'Trattoria Goduu',
+        description: `Um menu de restaurante simples.`,
+      },
+    }
+  },
+
 ]
 
 export default projectsData
