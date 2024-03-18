@@ -28,7 +28,7 @@ const LatestPosts: FC<LatestPostProps> = ({ posts }) => {
                     </AuraBeamBody>
                     {!localizedPosts.length && T.noPosts}
                     {localizedPosts.slice(0, MAX_DISPLAY).map((post) => (
-                        <PostSummary post={post} />
+                        <PostSummary key={post.title} post={post} />
                     ))}
                 </AuraBeamAnnotator>
             </div>

@@ -49,7 +49,7 @@ export const Card: FC<Project> = ({ translations, imgSrc, technologies, href, np
           <div>
             {technologies.map(technology => {
               return (
-                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium leading-4 bg-primary-100 text-primary-800 dark:bg-primary-800 dark:text-primary-100 mr-2 mb-2">
+                <span key={technology} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium leading-4 bg-primary-100 text-primary-800 dark:bg-primary-800 dark:text-primary-100 mr-2 mb-2">
                   {technology}
                 </span>
               )

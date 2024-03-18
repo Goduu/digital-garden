@@ -3,9 +3,6 @@ import { FC } from 'react'
 import { ProfessionalExperience } from '@contentlayer/generated'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { Heading } from '../Heading/Heading'
-import { LocalizedDate } from 'src/locale/LocalizedDate'
-import { current } from 'tailwindcss/colors'
-import { useTranslation } from 'src/locale/useTranslation'
 import { LocalizedText } from 'src/locale/LocalizedText'
 
 const ProfessionalItem: FC<ProfessionalExperience> = ({
@@ -18,10 +15,11 @@ const ProfessionalItem: FC<ProfessionalExperience> = ({
   title,
 }) => {
   const translations = { en, de, fr, pt }
+
   return (
-    <article className="border-neutral-6 border-t-2 py-6 first-of-type:border-none last-of-type:pb-0">
+    <article className="border-neutral-6 first-of-type:border-none last-of-type:pb-0">
       <Heading level={3}>
-        <div className="rounded-md bg-zinc-400 px-2 text-slate-50 dark:bg-slate-50 dark:text-slate-950">
+        <div className="rounded-md bg-teal-400 p-2 text-slate-50 dark:bg-teal-50 dark:text-slate-950">
           {title}
         </div>
         <div>
@@ -32,7 +30,7 @@ const ProfessionalItem: FC<ProfessionalExperience> = ({
         </div>
       </Heading>
 
-      <div className="mt-1 flex flex-col md:flex-row items-center gap-2 font-medium tracking-wide">
+      <div className="flex flex-col md:flex-row items-center gap-2 font-medium tracking-wide">
         <div className='flex gap-2 items-center'>
           <FaCalendar />
           {startDate} - {' '}
@@ -40,7 +38,7 @@ const ProfessionalItem: FC<ProfessionalExperience> = ({
             <LocalizedText translations={translations} translationKey='current' />
           }
         </div>
-        <div className="md:ml-auto md:justify-normal justify-center flex items-center gap-2 flex-wrap">
+        <div className="flex items-center gap-2 flex-wrap">
           {technologies.map((technology) => (
             <div
               key={technology}

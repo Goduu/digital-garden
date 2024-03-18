@@ -7,7 +7,6 @@ import { hasUrlLocale } from "./hasUrlLocale"
 import { usePathname } from "next/navigation"
 import { useRouter } from "next/navigation"
 
-
 const languageFlags: Record<AppLocale, ReactNode> = {
   "en": <US width={20} />, "fr": <FR width={20} />, "de": <DE width={20} />, "pt": <BR width={20} />
 }

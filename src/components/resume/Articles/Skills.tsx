@@ -17,7 +17,7 @@ const Skills: FC = () => {
       <SectionHeading icon={FaCheck} level={3} text="Skills &amp; Expertise" />
 
       <div className="mt-2 grid grid-flow-row gap-6 lg:grid-flow-col">
-        {localizedSkills.map((skill, skillIndex) => {
+        {localizedSkills.map((skill) => {
           skill = skill as Skill
           return (
             <div key={skill._id}>

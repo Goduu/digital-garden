@@ -1,28 +1,52 @@
-// "use client"
-// import { FaFilePdf } from 'react-icons/fa6'
-// import { FC } from 'react'
-// import { PDFDownloadLink, usePDF } from '@react-pdf/renderer'
-// import { CvPdf } from './MyCvPdf'
-// import Link from 'next/link'
-// import { useLocale } from '@/locale/useLocale'
+"use client"
+import React, { FC } from 'react';
+import { FaDownload } from 'react-icons/fa6';
+import { useTheme } from 'next-themes';
+import { useTranslation } from '@/locale/useTranslation';
 
-// interface PDFDownloadButtonProps {
-//     secret?: string
-// }
+const opt = {
+    margin: 1,
+    filename: 'Igor_Cangussu_CV.pdf',
+    jsPDF: { unit: "cm", putOnlyUsedFonts: true },
+    enableLinks: true,
+};
 
-// const PDFDownloadButton: FC<PDFDownloadButtonProps> = ({ secret }) => {
-//     const { locale } = useLocale()
-//     const [instance, updateInstance] = usePDF({
-//         // document: <DocumentPDF title='Sample Invoice' printData={printData} />,
-//         document: <CvPdf />,
-//     });
+const PDFDownloadButton: FC = () => {
+    const { theme, setTheme } = useTheme()
+    const T = useTranslation({ en, de, fr, pt })
 
-//     return (
-//         <Link href={instance.url || '#'} className='flex gap-4 items-center border w-fit p-2 rounded-md'>
-//             <FaFilePdf className='w-8' size="sm" />
-//             Download PDF s
-//         </Link>
-//     )
-// }
+    const handleDownloadPDF = () => {
+        const element = document.getElementById('pdf-content');
+        const currentTheme = theme
+        currentTheme === "dark" && setTheme('light')
 
-// export default PDFDownloadButton
+        // html2pdf.js uses some client functions that are not available in the server
+        import('html2pdf.js').then((html2pdf) => {
+            html2pdf.default().set(opt).from(element).save().then(() => {
+                currentTheme === "dark" && setTheme("dark")
+            });
+        });
+    };
+
+    return (
+        <button onClick={handleDownloadPDF} className="group border-neutral-5 rounded-md border px-3 font-bold py-2 flex gap-4 items-center">
+            <FaDownload className='group-hover:animate-bounce' />
+            {T.download}
+        </button>
+    );
+};
+
+export default PDFDownloadButton;
+
+const en = {
+    download: "Download PDF"
+}
+const de: typeof en = {
+    download: "PDF herunterladen"
+}
+const fr: typeof en = {
+    download: "Télécharger le PDF"
+}
+const pt: typeof en = {
+    download: "Baixar PDF"
+}

@@ -32,7 +32,7 @@ const Header = () => {
         {headerNavLinks
           .filter((link) => link.href !== '/')
           .map((link) => (
-            <HeaderLink link={link} />
+            <HeaderLink key={link.title} link={link} />
           )
           )}
         <SearchButton />

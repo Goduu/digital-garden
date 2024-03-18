@@ -10,13 +10,13 @@ interface SectionHeadingProps {
 }
 
 export const SectionHeading: FC<SectionHeadingProps> = (props) => {
-  const { icon, level = 3, text } = props
+  const { level = 3, text } = props
 
   return (
     <Heading level={level}>
       <div className="flex items-center gap-2">
         {props.icon && <span className="hidden md:flex">{props.icon && <props.icon />}</span>}
-        <div>{text}</div>
+        <div className='align-top'>{text}</div>
       </div>
     </Heading>
   )
