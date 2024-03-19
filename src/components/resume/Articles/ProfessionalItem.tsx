@@ -30,7 +30,7 @@ const ProfessionalItem: FC<ProfessionalExperience> = ({
         </div>
       </Heading>
 
-      <div className="flex flex-col md:flex-row items-center gap-2 font-medium tracking-wide">
+      <div className="flex flex-col items-center gap-2 font-medium tracking-wide">
         <div className='flex gap-2 items-center'>
           <FaCalendar />
           {startDate} - {' '}
