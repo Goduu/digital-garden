@@ -8,6 +8,10 @@ const opt = {
     margin: 1,
     filename: 'Igor_Cangussu_CV.pdf',
     jsPDF: { unit: "cm", putOnlyUsedFonts: true },
+    html2canvas: {
+        scale: 2,           // higher quality
+        windowWidth: 1440   // simulate a browser size that causes the page's responsive CSS to output a pleasing layout in the rendered PDF
+    },
     enableLinks: true,
 };
 
