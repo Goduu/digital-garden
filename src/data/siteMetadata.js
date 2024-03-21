@@ -7,7 +7,7 @@ const siteMetadata = {
   language: 'en-us',
   image: '/static/images/social_banner.png',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://digital-garden-chi-seven.vercel.app',
+  siteUrl: 'https://goduu.vercel.app',
   siteRepo: 'https://github.com/Goduu/digital-garden',
   siteLogo: '/static/images/logo_light.svg',
   socialBanner: '/static/images/social_banner.png',
