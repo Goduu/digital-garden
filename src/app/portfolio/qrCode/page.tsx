@@ -17,7 +17,7 @@ export default function Page({ params }) {
       </h1>
       <QRCode
         size={256}
-        className='h-5/6 w-5/6'
+        className='h-5/6 w-5/6 bg-white p-2'
         value={qrCodeValue}
         viewBox={`0 0 256 256`}
       />
