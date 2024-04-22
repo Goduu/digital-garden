@@ -12,7 +12,7 @@ export default function Page({ params }) {
 
   return (
     <div className="flex flex-col items-center justify-center gap-4">
-      <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+      <h1 className="text-3xl font-extrabold leading-9 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
         {T.portfolio}
       </h1>
       <QRCode
@@ -21,6 +21,9 @@ export default function Page({ params }) {
         value={qrCodeValue}
         viewBox={`0 0 256 256`}
       />
+      <h2 className="text-xl font-extrabold leading-9 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+        {qrCodeValue}
+      </h2>
     </div>
   )
 }
