@@ -1,7 +1,7 @@
 import siteMetadata from 'src/data/siteMetadata'
 import LatestPosts from '../components/Post/LatestPosts'
 import { SiteSummary } from './SiteSummary'
-import { AuraBeam, AuraBeamVerticalDivider } from 'aura-beam-annotator'
+import { AuraBeam } from 'aura-beam-annotator'
 import { NewsLetter } from 'src/components/NewsLetter'
 
 export default function Home({ posts }) {

@@ -16,6 +16,7 @@ export default function BlogPage() {
     POSTS_PER_PAGE * (pageNumber - 1),
     POSTS_PER_PAGE * pageNumber
   )
+
   const pagination = {
     currentPage: pageNumber,
     totalPages: Math.ceil(localizedPosts.length / POSTS_PER_PAGE),
