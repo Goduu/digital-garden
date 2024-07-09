@@ -80,6 +80,29 @@ const projectsData: Project[] = [
     }
   },
   {
+    imgSrc: '/static/images/angular-stone.png',
+    technologies: ['Angular', 'Typescript', 'Tailwind CSS'],
+    href: 'https://angular-stone.netlify.app/',
+    translations: {
+      en: {
+        title: 'Angular Stone',
+        description: `Developing a functional table to learn about Angular.`,
+      },
+      de: {
+        title: 'Angular Stone',
+        description: `Entwicklung eines funktionalen Tabelle, um Angular zu lernen.`,
+      },
+      fr: {
+        title: 'Angular Stone',
+        description: `Développer une table fonctionnelle pour apprendre Angular.`,
+      },
+      pt: {
+        title: 'Angular Stone',
+        description: `Desenvolvendo uma tabela funcional para aprender Angular.`,
+      },
+    }
+  },
+  {
     imgSrc: '/static/images/trattoria.png',
     technologies: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript'],
     href: 'https://trattoria-goduu.vercel.app/',
