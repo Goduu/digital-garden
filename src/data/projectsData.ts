@@ -33,25 +33,25 @@ const projectsData: Project[] = [
     }
   },
   {
-    imgSrc: '/static/images/gym.jpg',
-    technologies: ['React', 'NextJs', 'Tailwind CSS', 'TypeScript', 'ContentLayer', "MDX"],
-    href: 'https://code-gym.vercel.app/',
+    imgSrc: '/static/images/jyms.jpg',
+    technologies: ['React', 'NextJs', 'Tailwind CSS', 'TypeScript', 'ContentLayer', "MDX", "Mobile"],
+    href: 'https://jyms.vercel.app/',
     translations: {
       en: {
-        title: 'Gym',
-        description: `The Gym application is a simple platform for learning and practicing programming languages. It includes a code editor, exercises with some tests to prove you have great skills as a developer. The application is built with React, Tailwind CSS, and TypeScript.`,
+        title: 'JymS',
+        description: `The JymS application is a simple platform for learning and practicing programming languages. It includes a code editor, exercises with some tests to prove you have great skills as a developer. The application is built with React, Tailwind CSS, and TypeScript.`,
       },
       de: {
-        title: 'Gym',
-        description: `Die Gym-Anwendung ist eine einfache Plattform zum Erlernen und Üben von Programmiersprachen. Sie enthält einen Code-Editor, Übungen mit einigen Tests, um zu beweisen, dass Sie großartige Fähigkeiten als Entwickler haben. Die Anwendung ist mit React, Tailwind CSS und TypeScript erstellt.`,
+        title: 'JymS',
+        description: `Die JymS-Anwendung ist eine einfache Plattform zum Erlernen und Üben von Programmiersprachen. Sie enthält einen Code-Editor, Übungen mit einigen Tests, um zu beweisen, dass Sie großartige Fähigkeiten als Entwickler haben. Die Anwendung ist mit React, Tailwind CSS und TypeScript erstellt.`,
       },
       fr: {
-        title: 'Gym',
-        description: 'L\'application Gym est une plateforme simple pour apprendre et pratiquer les langages de programmation. Elle comprend un éditeur de code, des exercices avec quelques tests pour prouver que vous avez de grandes compétences en tant que développeur. L\'application est construite avec React, Tailwind CSS et TypeScript.'
+        title: 'JymS',
+        description: 'L\'application JymS est une plateforme simple pour apprendre et pratiquer les langages de programmation. Elle comprend un éditeur de code, des exercices avec quelques tests pour prouver que vous avez de grandes compétences en tant que développeur. L\'application est construite avec React, Tailwind CSS et TypeScript.'
       },
       pt: {
-        title: 'Gym',
-        description: 'A aplicação Gym é uma plataforma simples para aprender e praticar linguagens de programação. Inclui um editor de código, exercícios com alguns testes para provar que você tem ótimas habilidades como desenvolvedor. A aplicação é construída com React, Tailwind CSS e TypeScript.',
+        title: 'JymS',
+        description: 'A aplicação JymS é uma plataforma simples para aprender e praticar linguagens de programação. Inclui um editor de código, exercícios com alguns testes para provar que você tem ótimas habilidades como desenvolvedor. A aplicação é construída com React, Tailwind CSS e TypeScript.',
       }
     }
   },
