@@ -11,23 +11,23 @@ export type Project = {
 const projectsData: Project[] = [
   {
     imgSrc: '/static/images/beecode.png',
-    technologies: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', "Mobile"],
-    href: 'https://beecode.vercel.app/',
+    technologies: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Supabase', 'contentlayer', "Mobile"],
+    href: 'https://beecodee.vercel.app/',
     translations: {
       en: {
-        title: 'beecode',
+        title: 'beecodee',
         description: `Duolingo for programming languages. Learn to code by solving coding challenges and quizzes. The application is built with React, Tailwind CSS, and TypeScript.`,
       },
       de: {
-        title: 'beecode',
+        title: 'beecodee',
         description: `Duolingo für Programmiersprachen. Lernen Sie zu programmieren, indem Sie Codierungsprobleme und Quizfragen lösen. Die Anwendung ist mit React, Tailwind CSS und TypeScript erstellt.`,
       },
       fr: {
-        title: 'beecode',
+        title: 'beecodee',
         description: `Duolingo pour les langages de programmation. Apprenez à coder en résolvant des défis de codage et des quiz. L'application est construite avec React, Tailwind CSS et TypeScript.`,
       },
       pt: {
-        title: 'beecode',
+        title: 'beecodee',
         description: `Duolingo para linguagens de programação. Aprenda a codificar resolvendo desafios de codificação e quizzes. A aplicação é construída com React, Tailwind CSS e TypeScript.`,
       },
     }
